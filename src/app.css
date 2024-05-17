@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'LigaSFMonoNerdFont';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/fonts/LigaSFMonoNerdFont-Regular.otf') format('opentype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
