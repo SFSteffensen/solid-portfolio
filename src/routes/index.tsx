@@ -11,8 +11,8 @@ export default function Home() {
   };
 
   return (
-    <main class="scroll-snap-container text-center mx-auto z-20 min-h-screen px-4 sm:px-6 lg:px-8">
-      <section id="Hero" class="scroll-snap-child pt-20 flex flex-col justify-end items-center h-[80vh]">
+    <main class="scroll-snap-container text-center mx-auto z-20 sm:px-6 lg:px-8">
+      <section id="Hero" class=" min-h-screen scroll-snap-child pb-32 flex flex-col justify-end items-center">
         <div id="meirl" class="transform-gpu w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-80 p-2 bg-base-300 bg-opacity-80 rounded-2xl flex-col justify-center items-center gap-1 inline-flex mb-10 md:mb-0">
           <div class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden mt-2 mb-4">
             <img class="object-cover object-center w-full h-full" src="/assets/Meirl.png" alt="Sebastian Steffensen" />
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
         <h2 class="text-5xl lg:text-6xl font-bold tracking-[2.5px] pb-2 pt-10">Hi, I'm Sebastian</h2>
         <div class="pt-5">
-          <h1 class="text-4xl font-semibold px-10 pb-10">
+          <h1 class="text-4xl font-semibold pb-10">
             <span class="font-mono">
               <TypeWrite speed={30}>&lt; Welcome to my portfolio! /&gt;</TypeWrite>
             </span>
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects">
+      <section id="projects" class='min-h-screen'>
         <Projects /> {/* TODO: finish projects section */}
       </section>
 
