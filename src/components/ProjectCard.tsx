@@ -9,7 +9,9 @@ interface ProjectCardProps {
 export default function ProjectCard({ image, title, secondaryBadge, description, badges }: ProjectCardProps) {
   return (
     <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src={image} alt={title} /></figure>
+      <figure class="h-48 overflow-hidden">
+        <img src={image} alt={title} class="w-full h-full object-cover" />
+      </figure>
       <div class="card-body">
         <h2 class="card-title">
           {title}
@@ -18,7 +20,7 @@ export default function ProjectCard({ image, title, secondaryBadge, description,
         <p>{description}</p>
         <div class="card-actions justify-end">
           {badges.map((badge) => (
-            <div class="badge badge-outline">{badge}</div>
+            <div key={badge} class="badge badge-outline">{badge}</div>
           ))}
         </div>
       </div>
