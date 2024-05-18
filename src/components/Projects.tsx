@@ -6,6 +6,7 @@ export default function Projects() {
     {
       image: "https://media.discordapp.net/attachments/905002334428483674/1217775981498994740/Subject.png?ex=6649cf43&is=66487dc3&hm=03d731b223e85d43c19d5583fff35cf212b0d9f242ae8bea708110d6953d3a30&=&format=webp&quality=lossless&width=698&height=700",
       title: "Task Tuner",
+      secondaryBadge: "In Progress",
       description: "A Modern cross-platform Lectio Wrapper for danish students, built with Rust, SolidJS, TailwindCSS and DaisyUI.",
       badges: ["Rust", "Solid", "Tauri"],
     },

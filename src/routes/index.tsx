@@ -41,8 +41,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" class='min-h-screen'>
-        <Projects /> {/* TODO: finish projects section */}
+      <section id="projects" class='min-h-screen pt-10'>
+        <Projects />
       </section>
 
       <section id="more">
