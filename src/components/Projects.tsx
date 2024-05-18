@@ -1,7 +1,5 @@
 import TypeWrite from "~/components/Typewrite";
 import ProjectCard from "~/components/ProjectCard";
-import { createSignal } from "solid-js";
-import inView from '~/hooks/inView';
 
 export default function Projects() {
   const projects = [
@@ -43,36 +41,28 @@ export default function Projects() {
     },
   ];
 
-  let projectsTextRef;
-  const [setProjectsTextRef, isProjectsTextInView] = inView();
-
   return (
     <main class="text-center mx-auto min-h-screen z-20 overflow-x-hidden">
       <div class="flex flex-col text-center md:text-left max-w-7xl justify-evenly mx-auto items-center">
         <div class="md:px-10 w-full">
-          <h1
-            ref={(el) => { projectsTextRef = el; setProjectsTextRef(el); }}
-            class="text-2xl pb-8 sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold font-mono whitespace-normal"
-          >
+          <h1 class="text-2xl pb-8 sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold font-mono whitespace-normal">
             <TypeWrite speed={30}>&lt; Projects: /&gt;</TypeWrite>
           </h1>
-          {isProjectsTextInView() && (
-            <div class="overflow-x-hidden mt-10">
-              <div class="carousel relative carousel-center max-w-full p-4 space-x-4 bg-neutral md:rounded-box">
-                {projects.map((project) => (
-                  <div class="carousel-item flex-none w-80">
-                    <ProjectCard
-                      image={project.image}
-                      title={project.title}
-                      secondaryBadge={project.secondaryBadge}
-                      description={project.description}
-                      badges={project.badges}
-                    />
-                  </div>
-                ))}
-              </div>
+          <div class="overflow-x-hidden mt-10"> {/* Add margin-top to separate the carousel from the text */}
+            <div class="carousel relative carousel-center max-w-full p-4 space-x-4 bg-neutral md:rounded-box">
+              {projects.map((project) => (
+                <div class="carousel-item flex-none w-80"> {/* Add fixed width and flex-none to each item */}
+                  <ProjectCard
+                    image={project.image}
+                    title={project.title}
+                    secondaryBadge={project.secondaryBadge}
+                    description={project.description}
+                    badges={project.badges}
+                  />
+                </div>
+              ))}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </main>
