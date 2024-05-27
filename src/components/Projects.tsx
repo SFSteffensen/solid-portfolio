@@ -4,7 +4,7 @@ import ProjectCard from "~/components/ProjectCard";
 export default function Projects() {
   const projects = [
     {
-      image: "https://media.discordapp.net/attachments/905002334428483674/1217775981498994740/Subject.png?ex=6649cf43&is=66487dc3&hm=03d731b223e85d43c19d5583fff35cf212b0d9f242ae8bea708110d6953d3a30&=&format=webp&quality=lossless&width=698&height=700",
+      image: "https://pub-2506486b91ea471b9d9751fb6d2d0261.r2.dev/TaskTunerIcon.png",
       title: "Task Tuner",
       secondaryBadge: "In Progress",
       description: "A Modern cross-platform Lectio Wrapper for danish students, built with Rust, SolidJS, TailwindCSS and DaisyUI.",
@@ -49,10 +49,10 @@ export default function Projects() {
           <h1 class="text-2xl pb-8 sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold font-mono whitespace-normal">
             <TypeWrite speed={30}>&lt; Projects: /&gt;</TypeWrite>
           </h1>
-          <div class="overflow-x-hidden mt-10"> {/* Add margin-top to separate the carousel from the text */}
+          <div class="overflow-x-hidden mt-10">
             <div class="carousel relative carousel-center max-w-full p-4 space-x-4 bg-neutral md:rounded-box">
               {projects.map((project) => (
-                <div class="carousel-item flex-none w-80"> {/* Add fixed width and flex-none to each item */}
+                <div class="carousel-item flex-none w-80">
                   <ProjectCard
                     image={project.image}
                     title={project.title}
