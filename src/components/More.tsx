@@ -10,7 +10,9 @@ export default function More() {
           </h1>
           <div class="overflow-x-hidden mt-10 p-4 bg-neutral md:rounded-box"> {/* Add padding and background */}
             <div class="max-w-full space-y-4 text-left">
-              {/* Add more content here */}
+              <p class="text-lg">
+                For now, that's all about me, if you found this site interesting, or want to know more about me, feel free to get in touch with me.
+              </p>
             </div>
           </div>
         </div>
