@@ -2,7 +2,18 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        rust: '#F74C01',
+        typescript: '#3078C6',
+        swift: '#F05237',
+        python: "#FFDA4D",
+        csharp: '#822C98',
+      },
+      fontFamily: {
+        mono: ['LigaSFMonoNerdFont', 'monospace'],
+      },
+    }
   },
   plugins: [
     require('daisyui'),
