@@ -3,21 +3,20 @@ import { onCleanup, onMount, createSignal } from "solid-js";
 export function useDarkMode() {
   const [isDarkMode, setIsDarkMode] = createSignal(false);
 
-  const initializeDarkMode = () => {
+  const applyDarkMode = (enabled) => {
     const root = document.documentElement;
+    if (enabled) {
+      root.setAttribute("data-theme", "dark");
+      localStorage.setItem('color-theme', 'dark');
+      setIsDarkMode(true);
+    } else {
+      root.setAttribute("data-theme", "light");
+      localStorage.setItem('color-theme', 'light');
+      setIsDarkMode(false);
+    }
+  };
 
-    const applyDarkMode = (enabled: boolean) => {
-      if (enabled) {
-        root.setAttribute("data-theme", "dark");
-        localStorage.setItem('color-theme', 'dark');
-        setIsDarkMode(true);
-      } else {
-        root.setAttribute("data-theme", "light");
-        localStorage.setItem('color-theme', 'light');
-        setIsDarkMode(false);
-      }
-    };
-
+  const initializeDarkMode = () => {
     const storedTheme = localStorage.getItem('color-theme');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -41,14 +40,7 @@ export function useDarkMode() {
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => {
       const newMode = !prev;
-      const root = document.documentElement;
-      if (newMode) {
-        root.setAttribute("data-theme", "dark");
-        localStorage.setItem('color-theme', 'dark');
-      } else {
-        root.setAttribute("data-theme", "light");
-        localStorage.setItem('color-theme', 'light');
-      }
+      applyDarkMode(newMode);
       return newMode;
     });
   };
