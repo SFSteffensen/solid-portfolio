@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main class="scroll-snap-container text-center mx-auto z-20">
       <title>Sebastian Steffensen</title>
-      <section id="intro" class="min-h-screen scroll-snap-child pb-32 flex flex-col justify-end items-center">
+      <section id="intro" class="min-h-screen scroll-snap-child pb-32 flex flex-col justify-end items-center pt-32">
         <div id="meirl" class="transform-gpu w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-80 p-2 bg-base-300 bg-opacity-80 rounded-2xl flex-col justify-center items-center gap-1 inline-flex mb-10 md:mb-0">
           <div class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden mt-2 mb-4">
             <img class="object-cover object-center w-full h-full" src="https://cdn.sfsteffensen.dev/Meirl.png" alt="Sebastian Steffensen" />
