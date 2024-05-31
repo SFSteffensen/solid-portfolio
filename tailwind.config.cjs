@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class', '[data-theme="dark"]'],
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -7,8 +8,8 @@ module.exports = {
         rust: '#F74C01',
         typescript: '#3078C6',
         swift: '#F05237',
-        python: "#FFDA4D",
         csharp: '#822C98',
+        typst: '#239BAB',
       },
       fontFamily: {
         mono: ['LigaSFMonoNerdFont', 'monospace'],

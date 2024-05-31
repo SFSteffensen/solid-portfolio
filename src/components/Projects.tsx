@@ -4,42 +4,38 @@ import ProjectCard from "~/components/ProjectCard";
 export default function Projects() {
   const projects = [
     {
-      image: "https://pub-2506486b91ea471b9d9751fb6d2d0261.r2.dev/TaskTunerIcon.png",
+      image: "https://cdn.sfsteffensen.dev/RustCNN.jpeg",
+      title: "RustCNN",
+      description: "Developed a Rust-based CNN that integrates multiple activation functions and optimization techniques to enhance model performance and accuracy.",
+      badges: ["Rust", "Machine Learning"],
+    },
+    {
+      image: "https://cdn.sfsteffensen.dev/TaskTunerIcon.png",
       title: "Task Tuner",
       secondaryBadge: "In Progress",
-      description: "A Modern cross-platform Lectio Wrapper for danish students, built with Rust, SolidJS, TailwindCSS and DaisyUI.",
+      description: "A modern cross-platform Lectio Wrapper for Danish students, built with Rust, SolidJS, TailwindCSS, and DaisyUI.",
       badges: ["Rust", "Solid", "Tauri"],
     },
     {
-      image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+      image: "https://cdn.sfsteffensen.dev/icecreamer.png",
       title: "Project Two",
-      description: "A brief description of Project Two.",
-      badges: ["React", "Firebase"],
+      secondaryBadge: "In Progress",
+      description: "Currently a public page for the confectionery line at ZBC Ringsted, aimed at streamlining the creation and management of new ice cream recipes.",
+      badges: ["Svelte", "Supabase", "Vercel"],
     },
     {
-      image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-      title: "Project Three",
-      description: "A brief description of Project Three.",
-      badges: ["Next.js", "TailwindCSS", "Vercel"],
+      image: "https://cdn.sfsteffensen.dev/PassManIcon.png",
+      title: "PassMan - The Password Manager",
+      description: "Developed a password manager using Tauri, Rust, Svelte, and Sveltekit, featuring a BCrypt hash-check system and a customizable password generator.",
+      badges: ["Rust", "Tauri", "Svelte"],
     },
     {
-      image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-      title: "Project Four",
-      description: "A brief description of Project Four.",
-      badges: ["Vue", "Vite", "Netlify"],
-    },
-    {
-      image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-      title: "Project Five",
-      description: "A brief description of Project Five.",
-      badges: ["Svelte", "Sapper", "AWS"],
-    },
-    {
-      image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-      title: "Project Six",
-      description: "A brief description of Project Six.",
-      badges: ["Angular", "NestJS", "Heroku"],
-    },
+      image: "https://cdn.sfsteffensen.dev/solidportfolio.png",
+      title: "Solid Portfolio",
+      secondaryBadge: "In Progress",
+      description: "A personal portfolio project built with Solid and DaisyUI. This project showcases my skills and experience, and I've enjoyed working with Solid and DaisyUI to create a polished and functional site.",
+      badges: ["Solid", "TailwindCSS", "DaisyUI"],
+    }
   ];
 
   return (
@@ -47,7 +43,7 @@ export default function Projects() {
       <div class="flex flex-col text-center md:text-left max-w-7xl justify-evenly mx-auto items-center">
         <div class="md:px-10 w-full">
           <h1 class="text-2xl pb-8 sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold font-mono whitespace-normal">
-            <TypeWrite speed={30}>&lt; Projects: /&gt;</TypeWrite>
+            <TypeWrite speed={30}>&lt;Projects:/&gt;</TypeWrite>
           </h1>
           <div class="overflow-x-hidden mt-10">
             <div class="carousel relative carousel-center max-w-full p-4 space-x-4 bg-neutral md:rounded-box">

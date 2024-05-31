@@ -13,19 +13,19 @@ export default function Nav() {
   };
 
   return (
-    <nav class={`bg-base-100 dark:bg-neutral z-10 fixed top-0 w-full`}>
+    <nav class={`bg-neutral z-10 fixed top-0 w-full`}>
       <ul class="w-full flex items-center justify-between p-3 space-x-7">
         <div class="flex space-x-7">
-          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-primary">
+          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-neutral-content">
             <a href="#intro" onMouseDown={() => handleScrollTo('hero')}>Hero</a>
           </li>
-          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-primary">
+          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-neutral-content">
             <a href="#about" onMouseDown={() => handleScrollTo('about')}>About Me</a>
           </li>
-          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-primary">
+          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-neutral-content">
             <a href="#projects" onMouseDown={() => handleScrollTo('projects')}>Projects</a>
           </li>
-          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-primary">
+          <li class="border-b-2 border-transparent hover:border-primary dark:hover:border-primary text-neutral-content">
             <a href="#cv" onMouseDown={() => handleScrollTo('cv')}>CV</a>
           </li>
         </div>

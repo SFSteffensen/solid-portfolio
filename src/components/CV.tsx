@@ -6,18 +6,27 @@ export default function CV() {
       <div class="flex flex-col text-center md:text-left max-w-7xl justify-evenly mx-auto items-center">
         <div class="md:px-10 w-full">
           <h1 class="text-2xl pb-8 sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold font-mono whitespace-normal">
-            <TypeWrite speed={30}>&lt; CV: /&gt;</TypeWrite>
+            <TypeWrite speed={30}>&lt;CV:/&gt;</TypeWrite>
           </h1>
           <div class="overflow-x-hidden mt-10 p-4 bg-neutral md:rounded-box">
             <div class="max-w-full space-y-4 text-left">
               <p class="text-lg md:text-xl">
-                I have yet to finish my degree but that doesn't mean...
+                I am a dedicated and skilled student developer from Denmark, currently studying Robot Technology at ZBC Slagelse. With a passion for programming and experience in various projects, I have developed a strong foundation in software development.
               </p>
               <p class="text-lg md:text-xl">
-                <strong>Education:</strong> ZBC Slagelse - Robot Technology, 2021 - 2024
+                <strong>Education:</strong> ZBC Slagelse - Robot Technology, 2021 - 2024 (Grade Average: 10.45/12.0)
               </p>
               <p class="text-lg md:text-xl">
-                <strong>Experience:</strong> Software Developer at ZBC Ringsted Confectionary Department, 2024 - 2024
+                <strong>Experience:</strong> Software Developer at ZBC Ringsted Confectionary Department, Jan 2024 - Present
+              </p>
+              <p class="text-lg md:text-xl">
+                <strong>Skills:</strong> Rust, C#, Python, HTML, CSS, Javascript/Typescript, Svelte, Tailwind CSS, Node & Bun, NextJS, SolidJS
+              </p>
+              <p class="text-lg md:text-xl">
+                <strong>Languages:</strong> Danish (Native), English (Native)
+              </p>
+              <p class="text-lg md:text-xl">
+                <strong>Interests:</strong> Programming, Video Games, Reading Non-fiction, Music
               </p>
             </div>
             <div class="flex justify-center mt-8">
