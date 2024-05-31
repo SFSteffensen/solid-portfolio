@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         mono: ['LigaSFMonoNerdFont', 'monospace'],
+        'sf-pro': ['SF Pro Display', 'sans-serif'],
       },
     }
   },
