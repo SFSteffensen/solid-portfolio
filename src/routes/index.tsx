@@ -18,7 +18,7 @@ export default function Home() {
       <section id="intro" class="min-h-screen scroll-snap-child pb-32 flex flex-col justify-end items-center">
         <div id="meirl" class="transform-gpu w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-80 p-2 bg-base-300 bg-opacity-80 rounded-2xl flex-col justify-center items-center gap-1 inline-flex mb-10 md:mb-0">
           <div class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden mt-2 mb-4">
-            <img class="object-cover object-center w-full h-full" src="https://pub-2506486b91ea471b9d9751fb6d2d0261.r2.dev/Meirl.png" alt="Sebastian Steffensen" />
+            <img class="object-cover object-center w-full h-full" src="https://cdn.sfsteffensen.dev/Meirl.png" alt="Sebastian Steffensen" />
           </div>
           <HackText speed={300} class="text-center text-opacity-95 text-base sm:text-lg md:text-xl font-regular leading-normal" text="Sebastian" />
           <HackText speed={300} class="text-center text-opacity-95 text-base sm:text-lg md:text-xl font-regular leading-normal" text="Steffensen" />

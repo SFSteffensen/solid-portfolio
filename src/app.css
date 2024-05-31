@@ -9,8 +9,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('public/fonts/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
 }
 
 .gradient-py-text {
