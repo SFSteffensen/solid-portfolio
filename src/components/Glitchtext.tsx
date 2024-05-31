@@ -33,7 +33,7 @@ export default function HackText(props: HackTextProps) {
           })
           .join("");
         iteration++;
-        start = timestamp; // Update start time to current timestamp
+        start = timestamp;
       }
     }
     if (iteration <= props.text.length) {
