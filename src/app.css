@@ -4,14 +4,14 @@
 
 @font-face {
     font-family: 'LigaSFMonoNerdFont';
-    src: url('https://cdn.sfsteffensen.dev/LigaSFMonoNerdFont-Regular.woff2') format('opentype');
+    src: url('public/fonts/LigaSFMonoNerdFont-Regular.woff2') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.woff2') format('opentype');
+    src: url('public/fonts/SF-Pro-Display-Regular.woff2') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
