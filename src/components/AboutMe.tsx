@@ -11,16 +11,16 @@ export default function AboutMe() {
           <div class="overflow-x-hidden mt-10 p-4 bg-neutral md:rounded-box">
             <div class="max-w-full space-y-4 text-left">
               <p class="text-lg md:text-xl">
-                Hello, I'm Sebastian! I'm an introverted student developer from Denmark, graduating from ZBC Slagelse, from the Robot Technology line on June 26th, 2024. Although I may seem reserved initially, I am quite approachable and friendly once you get to know me.
+                Greetings! I'm Sebastian, an ambitious student developer hailing from Denmark, set to graduate from ZBC Slagelse's Robot Technology program on June 26th, 2024. While my demeanor might lean towards introversion at first glance, I'm actually quite approachable and amiable once you engage with me.
               </p>
               <p class="text-lg md:text-xl">
-                In my free time, I enjoy immersing myself in video games. I've been an avid gamer for years, and I love exploring new worlds and narratives through my favorite games.
+                When I'm not immersed in academia, I'm diving headfirst into the captivating realm of video games. With years of avid gaming under my belt, I relish the opportunity to traverse new worlds and narratives through my favorite titles.
               </p>
               <p class="text-lg md:text-xl">
-                I have experience in several programming languages, including <span class='font-mono text-rust'>Rust</span>, <span class='font-mono text-typescript'>TypeScript</span>, <span class='font-mono gradient-py-text'>Python</span>, <span class='font-mono text-csharp'>C#</span>, and <span class='font-mono text-typst'>Typst</span>. Rust is my preferred language due to its emphasis on performance, safety, and concurrency. I appreciate writing code that runs efficiently and smoothly. Additionally, I favor using UNIX-like operating systems for their flexibility and customization, except when gaming.
+                Proficient in a variety of programming languages, including <span class='font-mono text-rust'>Rust</span>, <span class='font-mono text-typescript'>TypeScript</span>, <span class='font-mono gradient-py-text'>Python</span>, <span class='font-mono text-csharp'>C#</span>, and <span class='font-mono text-typst'>Typst</span>, I excel particularly in Rust. Its focus on performance, safety, and concurrency aligns seamlessly with my coding philosophy. I take pride in crafting efficient and seamless code that delivers optimal performance. Moreover, I gravitate towards UNIX-like operating systems for their unparalleled flexibility and customization, except when I'm engrossed in gaming.
               </p>
               <p class="text-lg md:text-xl">
-                Outside of programming and gaming, I enjoy cooking and spending time with my friends and family. I am always eager to try new things and explore new places.
+                Beyond the realms of programming and gaming, you'll find me honing my culinary skills or cherishing moments with loved ones. I possess an insatiable curiosity, always eager to venture into uncharted territories and embrace new experiences.
               </p>
             </div>
           </div>
