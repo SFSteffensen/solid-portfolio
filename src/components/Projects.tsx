@@ -4,33 +4,33 @@ import ProjectCard from "~/components/ProjectCard";
 export default function Projects() {
   const projects = [
     {
-      image: "https://cdn.sfsteffensen.dev/RustCNN.jpeg",
+      image: "https://cdn.sfsteffensen.dev/RustCNN.webp",
       title: "RustCNN",
       description: "Developed a Rust-based CNN that integrates multiple activation functions and optimization techniques to enhance model performance and accuracy.",
       badges: ["Rust", "Machine Learning"],
     },
     {
-      image: "https://cdn.sfsteffensen.dev/TaskTunerIcon.png",
+      image: "https://cdn.sfsteffensen.dev/TaskTunerIcon.webp",
       title: "Task Tuner",
       secondaryBadge: "In Progress",
       description: "A modern cross-platform Lectio Wrapper for Danish students, built with Rust, SolidJS, TailwindCSS, and DaisyUI.",
       badges: ["Rust", "Solid", "Tauri"],
     },
     {
-      image: "https://cdn.sfsteffensen.dev/icecreamer.png",
+      image: "https://cdn.sfsteffensen.dev/icecreamer.webp",
       title: "Project Two",
       secondaryBadge: "In Progress",
       description: "Currently a public page for the confectionery line at ZBC Ringsted, aimed at streamlining the creation and management of new ice cream recipes.",
       badges: ["Svelte", "Supabase", "Vercel"],
     },
     {
-      image: "https://cdn.sfsteffensen.dev/PassManIcon.png",
+      image: "https://cdn.sfsteffensen.dev/PassManIcon.webp",
       title: "PassMan - The Password Manager",
       description: "Developed a password manager using Tauri, Rust, Svelte, and Sveltekit, featuring a BCrypt hash-check system and a customizable password generator.",
       badges: ["Rust", "Tauri", "Svelte"],
     },
     {
-      image: "https://cdn.sfsteffensen.dev/solidportfolio.png",
+      image: "https://cdn.sfsteffensen.dev/solidportfolio.webp",
       title: "Solid Portfolio",
       secondaryBadge: "In Progress",
       description: "A personal portfolio project built with Solid and DaisyUI. This project showcases my skills and experience, and I've enjoyed working with Solid and DaisyUI to create a polished and functional site.",
