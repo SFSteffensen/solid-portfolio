@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'LigaSFMonoNerdFont';
-    src: url('https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.otf') format('opentype');
+    src: url('https://cdn.sfsteffensen.dev/LigaSFMonoNerdFont-Regular.woff2') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.otf') format('opentype');
+    src: url('https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.woff2') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
