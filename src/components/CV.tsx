@@ -14,7 +14,7 @@ export default function CV() {
                 I am a dedicated and skilled student developer from Denmark, currently studying Robot Technology at ZBC Slagelse. With a passion for programming and experience in various projects, I have developed a strong foundation in software development.
               </p>
               <p class="text-lg md:text-xl">
-                <strong>Education:</strong> ZBC Slagelse - Robot Technology, 2021 - 2024 (Grade Average: 10.45/12.0)
+                <strong>Education:</strong> ZBC Slagelse - Robot Technology, 2021 - 2024 (Grade Average: 9.9/12.0)
               </p>
               <p class="text-lg md:text-xl">
                 <strong>Experience:</strong> Software Developer at ZBC Ringsted Confectionary Department, Jan 2024 - Present

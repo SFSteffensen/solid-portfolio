@@ -11,10 +11,10 @@ export default function AboutMe() {
           <div class="overflow-x-hidden mt-10 p-4 bg-neutral md:rounded-box">
             <div class="max-w-full space-y-4 text-left">
               <p class="text-lg md:text-xl">
-                Greetings! I'm Sebastian, an ambitious student developer from Denmark, set to graduate from ZBC Slagelse's Robot Technology program on June 26th, 2024. I am approachable and amiable, always eager to engage and collaborate.
+                Greetings! I'm Sebastian, a 19-year-old recent graduate from ZBC Slagelse. I am approachable and amiable, always eager to engage and collaborate.
               </p>
               <p class="text-lg md:text-xl">
-                When I'm not immersed in academia, I dive headfirst into the captivating realm of video games. With years of avid gaming under my belt, I relish the opportunity to explore new worlds and narratives through my favorite titles.
+                When I'm not immersed in learning, I dive headfirst into the captivating realm of video games. With years of avid gaming under my belt, I relish the opportunity to explore new worlds and narratives through my favorite titles.
               </p>
               <p class="text-lg md:text-xl">
                 Proficient in a variety of programming languages, including <span class='font-mono text-rust'>Rust</span>, <span class='font-mono text-typescript'>TypeScript</span>, <span class='font-mono gradient-py-text'>Python</span>, <span class='font-mono text-csharp'>C#</span>, and <span class='font-mono text-typst'>Typst</span>, I excel particularly in Rust. Its focus on performance, safety, and concurrency aligns seamlessly with my coding philosophy. I take pride in crafting efficient and seamless code that delivers optimal performance. Moreover, I gravitate towards UNIX-like operating systems for their unparalleled flexibility and customization, except when I'm engrossed in gaming.
@@ -23,7 +23,6 @@ export default function AboutMe() {
                 Beyond the realms of programming and gaming, you'll find me honing my culinary skills or cherishing moments with loved ones. I possess an insatiable curiosity, always eager to venture into uncharted territories and embrace new experiences.
               </p>
             </div>
-
           </div>
         </div>
       </div>
