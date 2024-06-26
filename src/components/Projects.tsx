@@ -12,13 +12,12 @@ export default function Projects() {
     {
       image: "https://cdn.sfsteffensen.dev/TaskTunerIcon.webp",
       title: "Task Tuner",
-      secondaryBadge: "In Progress",
       description: "A modern cross-platform Lectio Wrapper for Danish students, built with Rust, SolidJS, TailwindCSS, and DaisyUI.",
       badges: ["Rust", "Solid", "Tauri"],
     },
     {
       image: "https://cdn.sfsteffensen.dev/icecreamer.webp",
-      title: "Project Two",
+      title: "ZBC Icecreamer",
       secondaryBadge: "In Progress",
       description: "Currently a public page for the confectionery line at ZBC Ringsted, aimed at streamlining the creation and management of new ice cream recipes.",
       badges: ["Svelte", "Supabase", "Vercel"],
@@ -32,7 +31,6 @@ export default function Projects() {
     {
       image: "https://cdn.sfsteffensen.dev/solidportfolio.webp",
       title: "Solid Portfolio",
-      secondaryBadge: "In Progress",
       description: "A personal portfolio project built with Solid and DaisyUI. This project showcases my skills and experience, and I've enjoyed working with Solid and DaisyUI to create a polished and functional site.",
       badges: ["Solid", "TailwindCSS", "DaisyUI"],
     }
