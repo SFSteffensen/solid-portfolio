@@ -13,12 +13,11 @@ export default function Projects() {
       image: "https://cdn.sfsteffensen.dev/TaskTunerIcon.webp",
       title: "Task Tuner",
       description: "A modern cross-platform Lectio Wrapper for Danish students, built with Rust, SolidJS, TailwindCSS, and DaisyUI.",
-      badges: ["Rust", "Solid", "Tauri"],
+      badges: ["Rust", "SolidJS", "Tauri"],
     },
     {
       image: "https://cdn.sfsteffensen.dev/icecreamer.webp",
       title: "ZBC Icecreamer",
-      secondaryBadge: "In Progress",
       description: "Currently a public page for the confectionery line at ZBC Ringsted, aimed at streamlining the creation and management of new ice cream recipes.",
       badges: ["Svelte", "Supabase", "Vercel"],
     },
@@ -32,8 +31,14 @@ export default function Projects() {
       image: "https://cdn.sfsteffensen.dev/solidportfolio.webp",
       title: "Solid Portfolio",
       description: "A personal portfolio project built with Solid and DaisyUI. This project showcases my skills and experience, and I've enjoyed working with Solid and DaisyUI to create a polished and functional site.",
-      badges: ["Solid", "TailwindCSS", "DaisyUI"],
-    }
+      badges: ["SolidJS", "TailwindCSS", "DaisyUI"],
+    },
+    {
+      image: "https://cdn.sfsteffensen.dev/DTimeIcon.webp",
+      title: "DTime",
+      description: "Developed a simple and efficient application for calculating download time based on internet speed. Built with a Rust backend and a SolidJS frontend using Tauri V2.",
+      badges: ["Rust", "SolidJS", "Tauri"],
+    },
   ];
 
   return (
