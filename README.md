@@ -76,6 +76,9 @@ Your application should now be running on `http://localhost:3000`.
 │   ├── entry-client.tsx
 │   ├── entry-server.tsx
 │   └── global.d.ts
+├── .github
+│   └── workflows
+│       └── docker-publish.yml
 ├── tailwind.config.cjs
 ├── README.md
 ├── .gitignore
@@ -83,7 +86,8 @@ Your application should now be running on `http://localhost:3000`.
 ├── bun.lockb
 ├── package.json
 ├── postcss.config.cjs
-└── tsconfig.json
+├── tsconfig.json
+├── Dockerfile
 ```
 
 ## Technologies Used
