@@ -11,8 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  # Convert the repository name to lowercase to meet Docker's requirement
-  IMAGE_NAME: ${{ github.repository | toLowerCase }}
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
@@ -54,11 +53,9 @@ jobs:
         uses: docker/build-push-action@v5.0.0
         with:
           context: .
-          file: ./Dockerfile 
+          file: ./Dockerfile # Ensure this path matches your Dockerfile location
           push: ${{ github.event_name != 'pull_request' }}
-          tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:master
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
