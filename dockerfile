@@ -14,7 +14,7 @@ COPY . .
 # Run the build command using Bun
 RUN bun run build
 
-# Expose the port your application will run on (replace 3000 with your actual port if different)
+# Expose Port
 EXPOSE 3000
 
 # Set memory and init options for running the container
