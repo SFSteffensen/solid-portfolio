@@ -20,7 +20,7 @@ export default function CV() {
                 <strong>Experience:</strong> Software Developer at ZBC Ringsted Confectionary Department, Jan 2024 - Present
               </p>
               <p class="text-lg md:text-xl">
-                <strong>Skills:</strong> Rust, C#, Python, HTML, CSS, Javascript/Typescript, Svelte, Tailwind CSS, Node & Bun, NextJS, SolidJS
+                <strong>Skills:</strong> Rust, C#, Python, HTML, CSS, Javascript/Typescript, Svelte, Tailwind CSS, Node & Bun, NextJS, SolidJS, and Docker
               </p>
               <p class="text-lg md:text-xl">
                 <strong>Languages:</strong> Danish (Native), English (Native)
