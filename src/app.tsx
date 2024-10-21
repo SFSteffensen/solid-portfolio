@@ -22,7 +22,6 @@ export default function App() {
               <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </div>
           </MetaProvider>
-          <script defer data-domain="sfsteffensen.dev" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
           <Nav />
           <Suspense>{props.children}</Suspense>
         </>
