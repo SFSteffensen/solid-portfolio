@@ -11,13 +11,13 @@ export default function CV() {
           <div class="overflow-x-hidden mt-10 p-4 bg-neutral md:rounded-box">
             <div class="max-w-full space-y-4 text-left">
               <p class="text-lg md:text-xl">
-                I am a dedicated and skilled developer from Denmark, currently studying Robot Technology at ZBC Slagelse. With a passion for programming and experience in various projects, I have developed a strong foundation in software development.
+                I am a dedicated and skilled software developer from Denmark, who recently graduated ZBC Slagelse. With a passion for programming and experience in various projects, I have developed a strong foundation in software development.
               </p>
               <p class="text-lg md:text-xl">
                 <strong>Education:</strong> ZBC Slagelse - Robot Technology, 2021 - 2024 (Grade Average: 9.9/12.0)
               </p>
               <p class="text-lg md:text-xl">
-                <strong>Experience:</strong> Software Developer at ZBC Ringsted Confectionary Department, Jan 2024 - Present
+                <strong>Experience:</strong> Software Developer at ZBC Ringsted Confectionary Department, Jan 2024 - Jun 2024
               </p>
               <p class="text-lg md:text-xl">
                 <strong>Skills:</strong> Rust, C#, Python, HTML, CSS, Javascript/Typescript, Svelte, Tailwind CSS, Node & Bun, NextJS, SolidJS, and Docker

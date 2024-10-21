@@ -11,7 +11,7 @@ export default function AboutMe() {
           <div class="overflow-x-hidden mt-10 p-4 bg-neutral md:rounded-box">
             <div class="max-w-full space-y-4 text-left">
               <p class="text-lg md:text-xl">
-                Greetings! I'm Sebastian, a 19-year-old recent graduate from ZBC Slagelse. I am approachable and amiable, always eager to engage and collaborate.
+                Greetings! I'm Sebastian, a 19-year-old graduate from ZBC Slagelse. I am approachable and amiable, always eager to engage and collaborate.
               </p>
               <p class="text-lg md:text-xl">
                 When I'm not immersed in learning, I dive headfirst into the captivating realm of video games. With years of avid gaming under my belt, I relish the opportunity to explore new worlds and narratives through my favorite titles.
