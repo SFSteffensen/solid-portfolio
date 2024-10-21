@@ -14,7 +14,7 @@ export default function App() {
         <>
           <MetaProvider>
             <div class="Home">
-              <Title>Sebastian. F. Steffensen.</Title>
+              <Title>Sebastian Steffensen | Software Developer & Programmer</Title>
               <Meta charset="UTF-8" />
               <Link rel="canonical" href="https://sfsteffensen.dev" />
               <Meta name="description" content="Welcome to the portfolio of Sebastian Steffensen. Discover my projects, CV, and more. Get in touch for collaboration opportunities." />
