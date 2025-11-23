@@ -6,8 +6,7 @@
 
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.woff2")
-    format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15,8 +14,7 @@
 
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Medium.woff2")
-    format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -24,8 +22,7 @@
 
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Semibold.woff2")
-    format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -33,8 +30,7 @@
 
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Bold.woff2")
-    format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -42,8 +38,7 @@
 
 @font-face {
   font-family: "SF Mono";
-  src: url("https://cdn.sfsteffensen.dev/LigaSFMonoNerdFont-Regular.woff2")
-    format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/LigaSFMonoNerdFont-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -55,12 +50,12 @@
 
 @theme {
   /* Font Families */
-  --font-sans: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
-  --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    monospace;
+  --font-sans: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Catppuccin Latte (Light Theme) */
+  /* ========================================
+     Catppuccin Latte Colors (Light Theme)
+     ======================================== */
   --color-latte-rosewater: #dc8a78;
   --color-latte-flamingo: #dd7878;
   --color-latte-pink: #ea76cb;
@@ -88,7 +83,9 @@
   --color-latte-mantle: #e6e9ef;
   --color-latte-crust: #dce0e8;
 
-  /* Catppuccin Frappé (Dark Theme) */
+  /* ========================================
+     Catppuccin Frappé Colors (Dark Theme)
+     ======================================== */
   --color-frappe-rosewater: #f2d5cf;
   --color-frappe-flamingo: #eebebe;
   --color-frappe-pink: #f4b8e4;
@@ -116,28 +113,45 @@
   --color-frappe-mantle: #292c3c;
   --color-frappe-crust: #232634;
 
-  /* Semantic Color Mappings */
-  --color-primary: var(--color-latte-blue);
-  --color-primary-dark: var(--color-frappe-blue);
-  --color-accent: var(--color-latte-blue);
-  --color-accent-dark: var(--color-frappe-blue);
-  --color-background: var(--color-latte-base);
-  --color-background-dark: var(--color-frappe-base);
-  --color-surface: var(--color-latte-surface0);
-  --color-surface-dark: var(--color-frappe-surface0);
-  --color-text: var(--color-latte-text);
-  --color-text-dark: var(--color-frappe-text);
-  --color-muted: var(--color-latte-subtext0);
-  --color-muted-dark: var(--color-frappe-subtext0);
+  /* ========================================
+     Semantic Theme Colors (Auto Light/Dark)
+     Uses light:* and dark:* modifiers
+     ======================================== */
 
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
+  /* Primary Accent - RED */
+  --color-primary: light-dark(var(--color-latte-red), var(--color-frappe-red));
+
+  /* Background Colors */
+  --color-base: light-dark(var(--color-latte-base), var(--color-frappe-base));
+  --color-mantle: light-dark(var(--color-latte-mantle), var(--color-frappe-mantle));
+  --color-crust: light-dark(var(--color-latte-crust), var(--color-frappe-crust));
+
+  /* Surface Colors */
+  --color-surface0: light-dark(var(--color-latte-surface0), var(--color-frappe-surface0));
+  --color-surface1: light-dark(var(--color-latte-surface1), var(--color-frappe-surface1));
+  --color-surface2: light-dark(var(--color-latte-surface2), var(--color-frappe-surface2));
+
+  /* Text Colors */
+  --color-text: light-dark(var(--color-latte-text), var(--color-frappe-text));
+  --color-subtext0: light-dark(var(--color-latte-subtext0), var(--color-frappe-subtext0));
+  --color-subtext1: light-dark(var(--color-latte-subtext1), var(--color-frappe-subtext1));
+
+  /* Overlay Colors */
+  --color-overlay0: light-dark(var(--color-latte-overlay0), var(--color-frappe-overlay0));
+  --color-overlay1: light-dark(var(--color-latte-overlay1), var(--color-frappe-overlay1));
+  --color-overlay2: light-dark(var(--color-latte-overlay2), var(--color-frappe-overlay2));
+
+  /* Accent Colors (Auto-switching) */
+  --color-red: light-dark(var(--color-latte-red), var(--color-frappe-red));
+  --color-green: light-dark(var(--color-latte-green), var(--color-frappe-green));
+  --color-blue: light-dark(var(--color-latte-blue), var(--color-frappe-blue));
+  --color-yellow: light-dark(var(--color-latte-yellow), var(--color-frappe-yellow));
+  --color-mauve: light-dark(var(--color-latte-mauve), var(--color-frappe-mauve));
+  --color-pink: light-dark(var(--color-latte-pink), var(--color-frappe-pink));
+  --color-teal: light-dark(var(--color-latte-teal), var(--color-frappe-teal));
+  --color-sky: light-dark(var(--color-latte-sky), var(--color-frappe-sky));
+  --color-peach: light-dark(var(--color-latte-peach), var(--color-frappe-peach));
+  --color-lavender: light-dark(var(--color-latte-lavender), var(--color-frappe-lavender));
 
   /* Border Radius */
   --radius-sm: 0.375rem;
@@ -145,16 +159,13 @@
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
+
+/* ========================================
+   Custom Dark Mode Variant
+   ======================================== */
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ========================================
    Base Styles
@@ -168,6 +179,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light dark;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -178,16 +190,13 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-background);
+  background-color: var(--color-base);
   color: var(--color-text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body.dark {
-  background-color: var(--color-background-dark);
-  color: var(--color-text-dark);
 }
 
 /* ========================================
@@ -200,9 +209,12 @@ body.dark {
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1),
-    0 4px 16px 0 rgba(31, 38, 135, 0.08), 0 2px 8px 0 rgba(31, 38, 135, 0.06),
-    0 1px 4px 0 rgba(31, 38, 135, 0.04), 0 0.5px 2px 0 rgba(31, 38, 135, 0.02);
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.1),
+    0 4px 16px 0 rgba(31, 38, 135, 0.08),
+    0 2px 8px 0 rgba(31, 38, 135, 0.06),
+    0 1px 4px 0 rgba(31, 38, 135, 0.04),
+    0 0.5px 2px 0 rgba(31, 38, 135, 0.02);
 }
 
 /* Dark Glass (rich black, 7 shadow layers) */
@@ -211,9 +223,12 @@ body.dark {
   backdrop-filter: blur(40px) saturate(180%);
   -webkit-backdrop-filter: blur(40px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.5),
-    0 10px 30px 0 rgba(0, 0, 0, 0.4), 0 5px 15px 0 rgba(0, 0, 0, 0.3),
-    0 2.5px 7.5px 0 rgba(0, 0, 0, 0.2), 0 1.25px 3.75px 0 rgba(0, 0, 0, 0.15),
+  box-shadow:
+    0 20px 60px 0 rgba(0, 0, 0, 0.5),
+    0 10px 30px 0 rgba(0, 0, 0, 0.4),
+    0 5px 15px 0 rgba(0, 0, 0, 0.3),
+    0 2.5px 7.5px 0 rgba(0, 0, 0, 0.2),
+    0 1.25px 3.75px 0 rgba(0, 0, 0, 0.15),
     0 0.625px 1.875px 0 rgba(0, 0, 0, 0.1),
     0 0.3125px 0.9375px 0 rgba(0, 0, 0, 0.05);
 }
@@ -224,7 +239,8 @@ body.dark {
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0 15px 45px 0 rgba(0, 0, 0, 0.08),
     0 7.5px 22.5px 0 rgba(0, 0, 0, 0.06),
     0 3.75px 11.25px 0 rgba(0, 0, 0, 0.04),
     0 1.875px 5.625px 0 rgba(0, 0, 0, 0.03),
@@ -242,8 +258,10 @@ body.dark {
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(76, 79, 105, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(76, 79, 105, 0.1),
-    0 4px 16px 0 rgba(76, 79, 105, 0.08), 0 2px 8px 0 rgba(76, 79, 105, 0.06);
+  box-shadow:
+    0 8px 32px 0 rgba(76, 79, 105, 0.1),
+    0 4px 16px 0 rgba(76, 79, 105, 0.08),
+    0 2px 8px 0 rgba(76, 79, 105, 0.06);
 }
 
 /* Frappé Glass (Dark Theme) */
@@ -252,97 +270,57 @@ body.dark {
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(198, 208, 245, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3),
-    0 4px 16px 0 rgba(0, 0, 0, 0.25), 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.3),
+    0 4px 16px 0 rgba(0, 0, 0, 0.25),
+    0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Accent Glass Variants */
-.glass-accent-latte {
-  background: linear-gradient(
-    135deg,
-    rgba(30, 102, 245, 0.15),
-    rgba(114, 135, 253, 0.15)
-  );
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(30, 102, 245, 0.2);
+/* Auto-switching glass based on theme */
+.glass {
+  background: light-dark(rgba(239, 241, 245, 0.7), rgba(48, 52, 70, 0.75));
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid light-dark(rgba(76, 79, 105, 0.1), rgba(198, 208, 245, 0.15));
+  box-shadow: light-dark(0 8px 32px 0 rgba(76, 79, 105, 0.1), 0 8px 32px 0 rgba(0, 0, 0, 0.3));
 }
 
-.glass-accent-frappe {
-  background: linear-gradient(
-    135deg,
-    rgba(140, 170, 238, 0.15),
-    rgba(186, 187, 241, 0.15)
-  );
+/* Accent Glass with Red */
+.glass-accent {
+  background: light-dark(rgba(210, 15, 57, 0.15), rgba(231, 130, 132, 0.15));
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(140, 170, 238, 0.2);
+  border: 1px solid light-dark(rgba(210, 15, 57, 0.2), rgba(231, 130, 132, 0.2));
 }
 
 /* Hover Effects */
-.glass-hover-latte {
+.glass-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.glass-hover-latte:hover {
-  background: rgba(239, 241, 245, 0.85);
+.glass-hover:hover {
+  background: light-dark(rgba(239, 241, 245, 0.85), rgba(48, 52, 70, 0.9));
   transform: translateY(-4px);
-  box-shadow: 0 12px 48px 0 rgba(76, 79, 105, 0.15),
-    0 6px 24px 0 rgba(76, 79, 105, 0.12), 0 3px 12px 0 rgba(76, 79, 105, 0.09);
-}
-
-.glass-hover-frappe {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-hover-frappe:hover {
-  background: rgba(48, 52, 70, 0.9);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.4),
-    0 6px 24px 0 rgba(0, 0, 0, 0.35), 0 3px 12px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: light-dark(0 12px 48px 0 rgba(76, 79, 105, 0.15), 0 12px 48px 0 rgba(0, 0, 0, 0.4));
 }
 
 /* Navigation Glass */
-.glass-nav-latte {
-  background: rgba(239, 241, 245, 0.8);
+.glass-nav {
+  background: light-dark(rgba(239, 241, 245, 0.8), rgba(48, 52, 70, 0.8));
   backdrop-filter: blur(32px) saturate(180%);
   -webkit-backdrop-filter: blur(32px) saturate(180%);
-  border-bottom: 1px solid rgba(76, 79, 105, 0.1);
-}
-
-.glass-nav-frappe {
-  background: rgba(48, 52, 70, 0.8);
-  backdrop-filter: blur(32px) saturate(180%);
-  -webkit-backdrop-filter: blur(32px) saturate(180%);
-  border-bottom: 1px solid rgba(198, 208, 245, 0.1);
+  border-bottom: 1px solid light-dark(rgba(76, 79, 105, 0.1), rgba(198, 208, 245, 0.1));
 }
 
 /* ========================================
    Typography Utilities
    ======================================== */
 
-.text-primary {
-  color: var(--color-latte-blue);
-}
-
-.dark .text-primary {
-  color: var(--color-frappe-blue);
-}
-
-.text-accent {
-  color: var(--color-latte-blue);
-}
-
-.dark .text-accent {
-  color: var(--color-frappe-blue);
-}
-
-.text-muted {
-  color: var(--color-latte-subtext0);
-}
-
-.dark .text-muted {
-  color: var(--color-frappe-subtext0);
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-mauve));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .text-heading {
@@ -351,48 +329,14 @@ body.dark {
   letter-spacing: -0.02em;
 }
 
-.text-mono {
-  font-family: var(--font-mono);
-}
-
-/* ========================================
-   Gradient Text Effect
-   ======================================== */
-
-.text-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--color-latte-blue),
-    var(--color-latte-mauve)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.dark .text-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--color-frappe-blue),
-    var(--color-frappe-mauve)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* ========================================
    Focus Visible Styles (Accessibility)
    ======================================== */
 
 *:focus-visible {
-  outline: 2px solid var(--color-latte-blue);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
-}
-
-.dark *:focus-visible {
-  outline-color: var(--color-frappe-blue);
 }
 
 /* ========================================
@@ -403,7 +347,7 @@ body.dark {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--color-latte-blue);
+  background: var(--color-primary);
   color: white;
   padding: 8px 16px;
   text-decoration: none;
@@ -416,22 +360,13 @@ body.dark {
   left: 8px;
 }
 
-.dark .skip-link {
-  background: var(--color-frappe-blue);
-}
-
 /* ========================================
    Selection Colors
    ======================================== */
 
 ::selection {
-  background-color: rgba(30, 102, 245, 0.3);
-  color: var(--color-latte-text);
-}
-
-.dark ::selection {
-  background-color: rgba(140, 170, 238, 0.3);
-  color: var(--color-frappe-text);
+  background-color: light-dark(rgba(210, 15, 57, 0.3), rgba(231, 130, 132, 0.3));
+  color: var(--color-text);
 }
 
 /* ========================================
@@ -444,28 +379,16 @@ body.dark {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-latte-base);
+  background: var(--color-base);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-latte-overlay0);
+  background: var(--color-overlay0);
   border-radius: var(--radius-lg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-latte-overlay1);
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: var(--color-frappe-base);
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: var(--color-frappe-overlay0);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-frappe-overlay1);
+  background: var(--color-overlay1);
 }
 
 /* ========================================
