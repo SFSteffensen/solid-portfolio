@@ -1,5 +1,7 @@
-import { type Component, createSignal, For } from "solid-js";
+import { type Component, createSignal, For, onMount } from "solid-js";
 import { A } from "@solidjs/router";
+import ThemeToggle from "./ThemeToggle";
+import { initTheme } from "../stores/theme";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -15,10 +17,14 @@ const Nav: Component = () => {
   const toggleMenu = () => setIsOpen(!isOpen());
   const closeMenu = () => setIsOpen(false);
 
+  onMount(() => {
+    initTheme();
+  });
+
   return (
     <nav class="fixed top-4 left-4 right-4 z-50">
       <div class="container mx-auto">
-        <div class="glass-nav rounded-2xl px-6 py-4">
+        <div class="glass-nav rounded-2xl px-6 py-6">
           <div class="flex items-center justify-between">
             {/* Logo/Name */}
             <A
@@ -45,13 +51,8 @@ const Nav: Component = () => {
                 )}
               </For>
 
-              {/* Theme Toggle Placeholder */}
-              <button
-                class="w-10 h-10 rounded-lg bg-surface0 hover:bg-surface1 transition-colors flex items-center justify-center"
-                aria-label="Toggle theme"
-              >
-                <span class="text-text">🌙</span>
-              </button>
+              {/* Theme Toggle */}
+              <ThemeToggle />
             </div>
 
             {/* Mobile Menu Button */}
@@ -66,11 +67,7 @@ const Nav: Component = () => {
                   isOpen() ? "rotate-45 translate-y-2" : ""
                 }`}
               />
-              <span
-                class={`w-5 h-0.5 bg-text transition-all ${
-                  isOpen() ? "opacity-0" : ""
-                }`}
-              />
+              <span class={`w-5 h-0.5 bg-text transition-all ${isOpen() ? "opacity-0" : ""}`} />
               <span
                 class={`w-5 h-0.5 bg-text transition-all ${
                   isOpen() ? "-rotate-45 -translate-y-2" : ""
@@ -102,13 +99,10 @@ const Nav: Component = () => {
               </For>
 
               {/* Mobile Theme Toggle */}
-              <button
-                class="text-text hover:text-primary hover:bg-surface0 transition-all px-4 py-2 rounded-lg font-medium text-left flex items-center gap-2"
-                onClick={closeMenu}
-              >
-                <span>🌙</span>
-                <span>Toggle Theme</span>
-              </button>
+              <div class="px-4 py-2 flex items-center justify-between">
+                <span class="text-text font-medium">Theme</span>
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         </div>

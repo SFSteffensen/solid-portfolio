@@ -5,7 +5,7 @@ const ProjectDetail: Component = () => {
   const params = useParams();
 
   return (
-    <div class="min-h-screen bg-gradient-to-br from-base to-mantle">
+    <div class="min-h-screen bg-gradient-to-br from-base to-mantle pt-32">
       <div class="container mx-auto px-4 py-16">
         <h1 class="text-6xl font-bold text-heading text-gradient mb-4">
           Project: {params.slug}

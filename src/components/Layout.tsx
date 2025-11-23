@@ -1,7 +1,12 @@
-import { type ParentComponent } from "solid-js";
+import { type ParentComponent, onMount } from "solid-js";
 import Nav from "./Nav";
+import { initTheme } from "../stores/theme";
 
 const Layout: ParentComponent = (props) => {
+  onMount(() => {
+    initTheme();
+  });
+
   return (
     <>
       {/* Skip to main content link for accessibility */}
@@ -13,7 +18,7 @@ const Layout: ParentComponent = (props) => {
       <Nav />
 
       {/* Main content */}
-      <main id="main-content" class="pt-24 min-h-screen" tabindex="-1">
+      <main id="main-content" class="min-h-screen" tabindex="-1">
         {props.children}
       </main>
 
