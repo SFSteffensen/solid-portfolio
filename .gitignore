@@ -1,11 +1,11 @@
-
 dist
+.wrangler
 .solid
 .output
 .vercel
 .netlify
-netlify
 .vinxi
+app.config.timestamp_*.js
 
 # Environment
 .env
