@@ -26,12 +26,12 @@ const ThemeToggle: Component = () => {
 
       animate(
         handleRef,
-        { x: isDark ? 22 : 0 },
+        { x: isDark ? 23 : 3 },
         {
           type: "spring",
           stiffness: 500,
           damping: 30,
-          mass: 0.8,
+          mass: 1.0,
         },
       );
     });
@@ -54,7 +54,7 @@ const ThemeToggle: Component = () => {
     <button
       ref={switchRef}
       onClick={handleToggle}
-      class="flex items-center justify-start p-[2px] w-16 h-7 rounded-[15px] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-base"
+      class="flex items-center w-16 h-7 rounded-[15px] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-base"
       style={{
         "background-color": getBackgroundColor(),
       }}

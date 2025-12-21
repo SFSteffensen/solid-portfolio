@@ -23,8 +23,8 @@ const Nav: Component = () => {
 
   return (
     <nav class="fixed top-4 left-4 right-4 z-50">
-      <div class="container mx-auto">
-        <div class="glass-nav rounded-2xl px-6 py-6">
+      <div class="container mx-auto px-0">
+        <div class="glass-nav rounded-2xl px-12 py-6">
           <div class="flex items-center justify-between">
             {/* Logo/Name */}
             <A
@@ -75,7 +75,6 @@ const Nav: Component = () => {
               />
             </button>
           </div>
-
           {/* Mobile Menu */}
           <div
             class={`md:hidden transition-all duration-300 overflow-hidden ${

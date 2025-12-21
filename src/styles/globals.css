@@ -326,6 +326,7 @@ body {
   backdrop-filter: blur(32px) saturate(180%);
   -webkit-backdrop-filter: blur(32px) saturate(180%);
   border-bottom: 1px solid light-dark(rgba(76, 79, 105, 0.1), rgba(198, 208, 245, 0.1));
+  padding: 1rem;
 }
 
 /* Typography Utilities */

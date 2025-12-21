@@ -2,7 +2,7 @@ import { type Component } from "solid-js";
 
 const App: Component = () => {
   return (
-    <div class="min-h-screen bg-gradient-to-br from-base to-mantle transition-colors duration-300">
+    <div class="min-h-screen bg-linear-to-br from-base to-mantle transition-colors duration-300">
       <div class="container mx-auto px-4 py-16">
         {/* Header */}
         <header class="text-center mb-16">
