@@ -36,6 +36,10 @@ const routes = [
     path: "/*404",
     component: lazy(() => import("./routes/[...404]")),
   },
+  {
+    path: "/test",
+    component: lazy(() => import("./routes/test")),
+  },
 ];
 
 const root = document.getElementById("root");

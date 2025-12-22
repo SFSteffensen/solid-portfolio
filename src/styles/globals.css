@@ -299,6 +299,7 @@ body {
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid light-dark(rgba(76, 79, 105, 0.1), rgba(198, 208, 245, 0.15));
   box-shadow: light-dark(0 8px 32px 0 rgba(76, 79, 105, 0.1), 0 8px 32px 0 rgba(0, 0, 0, 0.3));
+  padding: 1rem;
 }
 
 /* Accent Glass with Red */
@@ -307,6 +308,7 @@ body {
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid light-dark(rgba(210, 15, 57, 0.2), rgba(231, 130, 132, 0.2));
+  padding: 1rem;
 }
 
 /* Hover Effects */
@@ -320,7 +322,9 @@ body {
   box-shadow: light-dark(0 12px 48px 0 rgba(76, 79, 105, 0.15), 0 12px 48px 0 rgba(0, 0, 0, 0.4));
 }
 
-/* Navigation Glass */
+/* Navigation Glass
+TODO: research chromatic abberation effect
+*/
 .glass-nav {
   background: light-dark(rgba(239, 241, 245, 0.8), rgba(48, 52, 70, 0.8));
   backdrop-filter: blur(32px) saturate(180%);
