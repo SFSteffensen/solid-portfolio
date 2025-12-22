@@ -4,7 +4,7 @@ import Button from "../components/ui/Button";
 
 const Test: Component = () => {
   const techStack = ["SolidJS", "TypeScript", "Tailwind", "Motion", "Vite"];
-  
+
   const colors = [
     { name: "Primary", class: "bg-primary" },
     { name: "Red", class: "bg-red" },
@@ -22,15 +22,10 @@ const Test: Component = () => {
   return (
     <div class="min-h-screen pt-32 pb-16">
       <div class="container mx-auto px-4 space-y-16">
-        
         {/* Header */}
         <div>
-          <h1 class="text-6xl font-bold text-heading text-gradient mb-4">
-            UI Test Kitchen 🧪
-          </h1>
-          <p class="text-xl text-subtext0">
-            Testing all components in light and dark mode
-          </p>
+          <h1 class="text-6xl font-bold text-heading text-gradient mb-4">UI Test Kitchen 🧪</h1>
+          <p class="text-xl text-subtext0">Testing all components in light and dark mode</p>
         </div>
 
         {/* Typography */}
@@ -58,20 +53,15 @@ const Test: Component = () => {
               <h3 class="text-xl font-bold text-heading mb-2">Default</h3>
               <p class="text-subtext0">Standard glass card with blur</p>
             </GlassCard>
-            
+
             <GlassCard variant="hover">
               <h3 class="text-xl font-bold text-heading mb-2">Hover</h3>
               <p class="text-subtext0">Lifts on hover with shadow</p>
             </GlassCard>
-            
+
             <GlassCard variant="accent">
               <h3 class="text-xl font-bold text-heading mb-2">Accent</h3>
               <p class="text-subtext0">Red accent background</p>
-            </GlassCard>
-            
-            <GlassCard variant="nav">
-              <h3 class="text-xl font-bold text-heading mb-2">Nav</h3>
-              <p class="text-subtext0">Navigation bar styling</p>
             </GlassCard>
           </div>
         </section>
@@ -79,16 +69,24 @@ const Test: Component = () => {
         {/* Buttons */}
         <section>
           <h2 class="text-4xl font-bold text-heading mb-6">Buttons</h2>
-          
+
           <GlassCard class="space-y-8">
             {/* Primary Buttons */}
             <div>
               <h3 class="text-2xl font-semibold text-heading mb-4">Primary</h3>
               <div class="flex flex-wrap gap-4">
-                <Button variant="primary" size="sm">Small</Button>
-                <Button variant="primary" size="md">Medium</Button>
-                <Button variant="primary" size="lg">Large</Button>
-                <Button variant="primary" size="md" disabled>Disabled</Button>
+                <Button variant="primary" size="sm">
+                  Small
+                </Button>
+                <Button variant="primary" size="md">
+                  Medium
+                </Button>
+                <Button variant="primary" size="lg">
+                  Large
+                </Button>
+                <Button variant="primary" size="md" disabled>
+                  Disabled
+                </Button>
               </div>
             </div>
 
@@ -96,10 +94,18 @@ const Test: Component = () => {
             <div>
               <h3 class="text-2xl font-semibold text-heading mb-4">Secondary</h3>
               <div class="flex flex-wrap gap-4">
-                <Button variant="secondary" size="sm">Small</Button>
-                <Button variant="secondary" size="md">Medium</Button>
-                <Button variant="secondary" size="lg">Large</Button>
-                <Button variant="secondary" size="md" disabled>Disabled</Button>
+                <Button variant="secondary" size="sm">
+                  Small
+                </Button>
+                <Button variant="secondary" size="md">
+                  Medium
+                </Button>
+                <Button variant="secondary" size="lg">
+                  Large
+                </Button>
+                <Button variant="secondary" size="md" disabled>
+                  Disabled
+                </Button>
               </div>
             </div>
 
@@ -107,10 +113,18 @@ const Test: Component = () => {
             <div>
               <h3 class="text-2xl font-semibold text-heading mb-4">Ghost</h3>
               <div class="flex flex-wrap gap-4">
-                <Button variant="ghost" size="sm">Small</Button>
-                <Button variant="ghost" size="md">Medium</Button>
-                <Button variant="ghost" size="lg">Large</Button>
-                <Button variant="ghost" size="md" disabled>Disabled</Button>
+                <Button variant="ghost" size="sm">
+                  Small
+                </Button>
+                <Button variant="ghost" size="md">
+                  Medium
+                </Button>
+                <Button variant="ghost" size="lg">
+                  Large
+                </Button>
+                <Button variant="ghost" size="md" disabled>
+                  Disabled
+                </Button>
               </div>
             </div>
           </GlassCard>
@@ -154,12 +168,10 @@ const Test: Component = () => {
           <h2 class="text-4xl font-bold text-heading mb-6">Text Effects</h2>
           <GlassCard class="space-y-6">
             <div>
-              <h3 class="text-5xl font-bold text-gradient mb-2">
-                Gradient Text
-              </h3>
+              <h3 class="text-5xl font-bold text-gradient mb-2">Gradient Text</h3>
               <p class="text-subtext0">Primary → Mauve gradient</p>
             </div>
-            
+
             <div>
               <a href="#" class="text-2xl text-primary hover:opacity-80 transition-opacity">
                 Link with Hover
@@ -173,9 +185,7 @@ const Test: Component = () => {
           <h2 class="text-4xl font-bold text-heading mb-6">Form Elements</h2>
           <GlassCard class="space-y-6">
             <div>
-              <label class="block text-sm font-medium text-text mb-2">
-                Text Input
-              </label>
+              <label class="block text-sm font-medium text-text mb-2">Text Input</label>
               <input
                 type="text"
                 placeholder="Enter something..."
@@ -184,9 +194,7 @@ const Test: Component = () => {
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-text mb-2">
-                Textarea
-              </label>
+              <label class="block text-sm font-medium text-text mb-2">Textarea</label>
               <textarea
                 placeholder="Enter a longer message..."
                 rows="4"
@@ -252,9 +260,7 @@ const Test: Component = () => {
               {(num) => (
                 <GlassCard variant="hover">
                   <div class="aspect-video bg-surface0 rounded-lg mb-4" />
-                  <h3 class="text-xl font-bold text-heading mb-2">
-                    Card {num}
-                  </h3>
+                  <h3 class="text-xl font-bold text-heading mb-2">Card {num}</h3>
                   <p class="text-subtext0 mb-4">
                     This is a project card with an image placeholder above
                   </p>
@@ -315,7 +321,6 @@ const Test: Component = () => {
             </div>
           </div>
         </section>
-
       </div>
     </div>
   );

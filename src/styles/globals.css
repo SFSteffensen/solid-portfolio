@@ -6,6 +6,9 @@
 ::view-transition-new(root) {
   animation-duration: 0.6s;
   animation-timing-function: ease-out;
+  mix-blend-mode: normal;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
 ::view-transition-old(root) {
@@ -299,7 +302,7 @@ body {
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid light-dark(rgba(76, 79, 105, 0.1), rgba(198, 208, 245, 0.15));
   box-shadow: light-dark(0 8px 32px 0 rgba(76, 79, 105, 0.1), 0 8px 32px 0 rgba(0, 0, 0, 0.3));
-  padding: 1rem;
+  will-change: backdrop-filter;
 }
 
 /* Accent Glass with Red */
@@ -309,17 +312,7 @@ body {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid light-dark(rgba(210, 15, 57, 0.2), rgba(231, 130, 132, 0.2));
   padding: 1rem;
-}
-
-/* Hover Effects */
-.glass-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-hover:hover {
-  background: light-dark(rgba(239, 241, 245, 0.85), rgba(48, 52, 70, 0.9));
-  transform: translateY(-4px);
-  box-shadow: light-dark(0 12px 48px 0 rgba(76, 79, 105, 0.15), 0 12px 48px 0 rgba(0, 0, 0, 0.4));
+  will-change: backdrop-filter;
 }
 
 /* Navigation Glass
@@ -331,6 +324,7 @@ TODO: research chromatic abberation effect
   -webkit-backdrop-filter: blur(32px) saturate(180%);
   border-bottom: 1px solid light-dark(rgba(76, 79, 105, 0.1), rgba(198, 208, 245, 0.1));
   padding: 1rem;
+  will-change: backdrop-filter;
 }
 
 /* Typography Utilities */

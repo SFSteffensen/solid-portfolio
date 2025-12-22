@@ -1,57 +1,62 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#eff1f5" />
-        <meta name="description" content="Sebastian F. Steffensen - Portfolio" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#eff1f5" />
+    <meta name="description" content="Sebastian F. Steffensen - Portfolio" />
 
-        <!-- Preload critical fonts -->
-        <link
-            rel="preload"
-            href="https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin="anonymous"
-        />
-        <link
-            rel="preload"
-            href="https://cdn.sfsteffensen.dev/SF-Pro-Display-Medium.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin="anonymous"
-        />
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      href="https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.sfsteffensen.dev/SF-Pro-Display-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-        <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
-        <title>Sebastian F. Steffensen - Portfolio</title>
+    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+    <title>Sebastian F. Steffensen - Portfolio</title>
 
-        <!-- FOUC Prevention Script -->
-        <script>
-            (function () {
-                // Get theme from localStorage or system preference
-                const stored = localStorage.getItem("theme-preference");
-                const systemPrefers = window.matchMedia("(prefers-color-scheme: dark)").matches
-                    ? "dark"
-                    : "light";
-                const theme = stored || systemPrefers;
+    <!-- FOUC Prevention Script -->
+    <script>
+      (function () {
+        // Get theme from localStorage or default to system
+        const stored = localStorage.getItem("theme-preference");
+        const systemPrefers = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
 
-                // Apply theme class immediately
-                if (theme === "dark") {
-                    document.documentElement.classList.add("dark");
-                }
+        // If stored is 'system' or null, use system preference
+        const theme = stored === "system" || !stored ? systemPrefers : stored;
 
-                // Update meta theme-color
-                const metaTheme = document.querySelector('meta[name="theme-color"]');
-                if (metaTheme) {
-                    metaTheme.setAttribute("content", theme === "dark" ? "#303446" : "#eff1f5");
-                }
-            })();
-        </script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
+        // Apply theme immediately
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.colorScheme = "dark";
+        } else {
+          document.documentElement.style.colorScheme = "light";
+        }
 
-        <script src="/src/index.tsx" type="module"></script>
-    </body>
+        // Update meta theme-color
+        const metaTheme = document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute("content", theme === "dark" ? "#303446" : "#eff1f5");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script src="/src/index.tsx" type="module"></script>
+  </body>
 </html>
