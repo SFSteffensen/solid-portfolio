@@ -1,22 +1,13 @@
-# Use the official Oven Bun image
-FROM oven/bun:latest
-
-# Set the working directory inside the container
+FROM oven/bun:1.4.3 AS build
 WORKDIR /app
-RUN bun upgrade
-# Copy the package files and install dependencies using Bun
-COPY package*.json ./
-RUN bun install
-
-# Copy the rest of the application code
+COPY package.json bun.lock ./
+RUN bun ci
 COPY . .
-
-# Run the build command using Bun
 RUN bun run build
 
-# Expose Port
+FROM oven/bun:1.4.3-alpine
+WORKDIR /app
+COPY --from=build /app/dist ./dist
+COPY serve.ts ./
 EXPOSE 3000
-
-# Set memory and init options for running the container
-ENTRYPOINT [ "bun" ]
-CMD ["run", ".output/server/index.mjs"]
+CMD ["bun", "serve.ts"]
