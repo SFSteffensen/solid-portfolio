@@ -1,0 +1,61 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "import", "jsx-a11y", "promise"],
+  "jsPlugins": ["eslint-plugin-solid"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "warn"
+  },
+  "options": {
+    "typeAware": true,
+    "denyWarnings": true,
+    "reportUnusedDisableDirectives": "error"
+  },
+  "settings": {
+    "solid": { "version": 2 }
+  },
+  "env": {
+    "browser": true,
+    "es2024": true
+  },
+  "rules": {
+    "eqeqeq": "error",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "typescript/consistent-type-imports": "error",
+    "import/no-cycle": "error",
+    "import/no-unassigned-import": ["error", { "allow": ["**/*.css"] }],
+
+    // eslint-plugin-solid's `v2` config, the one the official Solid 2.0 templates ship with
+    "solid/jsx-no-duplicate-props": "error",
+    "solid/jsx-no-undef": "error",
+    "solid/jsx-uses-vars": "error",
+    "solid/no-unknown-namespaces": "error",
+    "solid/no-innerhtml": "error",
+    "solid/jsx-no-script-url": "error",
+    "solid/components-return-once": "warn",
+    "solid/no-destructure": "error",
+    "solid/prefer-for": "error",
+    "solid/reactivity": "warn",
+    "solid/event-handlers": "error",
+    "solid/imports": "warn",
+    "solid/style-prop": "warn",
+    "solid/no-react-specific-props": "error",
+    "solid/self-closing-comp": "warn",
+    "solid/removed-api": "error",
+    "solid/no-single-arg-create-effect": "error",
+    "solid/no-store-mutation-outside-setter": "error",
+    "solid/no-write-in-pure-computation": "error",
+    "solid/no-unused-signal": "warn",
+    "solid/no-accessor-as-prop": "error",
+    "solid/no-boolean-enumerated-attribute": "error",
+    "solid/prefer-structured-class": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["serve.ts", "vite.config.ts"],
+      "env": { "browser": false, "node": true },
+      "rules": { "no-console": "off" }
+    }
+  ]
+}
