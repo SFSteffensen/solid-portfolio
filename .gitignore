@@ -17,3 +17,6 @@ dist
 # System Files
 .DS_Store
 Thumbs.db
+
+# Design mockup
+/mockup/
