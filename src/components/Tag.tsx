@@ -1,4 +1,5 @@
 import type { ParentProps } from "solid-js";
+import { Show } from "solid-js";
 
 export type Accent =
   | "rosewater"
@@ -16,19 +17,55 @@ export type Accent =
   | "blue"
   | "lavender";
 
-// Catppuccin-tinted pill for tech-stack labels
-export function Tag(props: ParentProps<{ color: Accent; size?: "sm" | "md" }>) {
+export const accent = (name: Accent) => `var(--color-${name})`;
+
+// Brand colors, defined in index.css
+export const languages = {
+  Rust: { color: "var(--lang-rust)" },
+  C: { color: "var(--lang-c)" },
+  "F#": { color: "var(--lang-fsharp)" },
+  Python: { color: "var(--lang-python)", gradient: "var(--lang-python-gradient)" },
+  TypeScript: { color: "var(--lang-typescript)" },
+  Typst: { color: "var(--lang-typst)" },
+  macOS: { color: "var(--lang-macos)" },
+  Linux: { color: "var(--lang-linux)" },
+} satisfies Record<string, { color: string; gradient?: string }>;
+
+export type Language = keyof typeof languages;
+
+type TagProps = ParentProps<{
+  color: string;
+  gradient?: string;
+  size?: "sm" | "md";
+}>;
+
+// Tinted pill for tech-stack labels
+export function Tag(props: TagProps) {
   return (
     <span
       class={[
-        "bg-(--tag)/16 font-semibold text-(--tag)",
+        "inline-block bg-(--tag)/16 font-semibold text-(--tag)",
         props.size === "md"
           ? "rounded-md px-3 py-1.5 text-[13px]"
           : "rounded-sm px-2.5 py-1 text-[11.5px]",
       ]}
-      style={{ "--tag": `var(--color-${props.color})` }}
+      style={{ "--tag": props.color }}
     >
-      {props.children}
+      <Show when={props.gradient} fallback={props.children}>
+        {(gradient) => (
+          <span class="bg-clip-text text-transparent" style={{ "background-image": gradient() }}>
+            {props.children}
+          </span>
+        )}
+      </Show>
     </span>
+  );
+}
+
+export function LanguageTag(props: { name: Language; size?: "sm" | "md" }) {
+  return (
+    <Tag {...languages[props.name]} size={props.size}>
+      {props.name}
+    </Tag>
   );
 }

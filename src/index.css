@@ -186,6 +186,23 @@
       color 0.3s ease;
   }
 
+  /* Language brand colors for tags, shaded per theme where the brand color lacks contrast */
+  :root {
+    --lang-rust: #f74c01;
+    --lang-c: light-dark(#03599c, #659ad2);
+    --lang-fsharp: light-dark(#378bba, #30b9db);
+    --lang-python: light-dark(#4b8abc, #6ba5db);
+    --lang-python-gradient: linear-gradient(
+      170deg,
+      var(--lang-python) 60%,
+      light-dark(#c99a00, #fed844) 40%
+    );
+    --lang-typescript: light-dark(#3078c6, #5d9ce6);
+    --lang-typst: light-dark(#239bab, #4fc3d1);
+    --lang-macos: var(--color-text);
+    --lang-linux: light-dark(#a07800, #fcc624);
+  }
+
   ::selection {
     background-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
     color: var(--color-text);

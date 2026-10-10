@@ -85,8 +85,8 @@ export function Hero() {
         </p>
 
         <p class="mb-7.5 max-w-150 text-lg leading-[1.65] text-subtext0">
-          Developer & engineering student in Copenhagen. I'm drawn to fast, well-typed software —
-          from low-level Rust to glassy front-ends — and I rice everything in Catppuccin.
+          Developer & engineering student in Copenhagen. I'm drawn to fast, well-typed software,
+          anything from low-level Rust to glassy front-ends
         </p>
 
         <div class="flex flex-wrap items-center gap-3.5">
