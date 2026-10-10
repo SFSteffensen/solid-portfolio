@@ -28,12 +28,12 @@ bun install
 
 ## Scripts
 
-| Command             | Description                                      |
-| ------------------- | ------------------------------------------------ |
-| `bun dev`           | Start the dev server on `http://localhost:5173`  |
-| `bun run build`     | Type-check and build to `dist/`                  |
-| `bun run preview`   | Preview the production build                     |
-| `bun run typecheck` | Type-check only                                  |
+| Command             | Description                                     |
+| ------------------- | ----------------------------------------------- |
+| `bun dev`           | Start the dev server on `http://localhost:5173` |
+| `bun run build`     | Type-check and build to `dist/`                 |
+| `bun run preview`   | Preview the production build                    |
+| `bun run typecheck` | Type-check only                                 |
 
 ## Docker
 

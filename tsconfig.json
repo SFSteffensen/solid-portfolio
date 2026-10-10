@@ -22,7 +22,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": true
   },
-  "include": ["src", "vite.config.ts", "serve.ts"],
+  "include": ["src", "vite.config.ts", "serve.ts"]
 }
