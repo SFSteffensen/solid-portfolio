@@ -150,6 +150,15 @@
 
   --tracking-heading: -0.02em;
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* cursor */
+  --animate-blink: blink 1.1s steps(1) infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 @layer base {
