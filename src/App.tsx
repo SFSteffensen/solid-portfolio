@@ -10,7 +10,7 @@ export default function App() {
         <button
           type="button"
           class="rounded-md bg-zinc-800 px-4 py-2 hover:bg-zinc-700"
-          onClick={() => setCount(c => c + 1)}
+          onClick={() => setCount((c) => c + 1)}
         >
           Clicked {count()} times
         </button>

@@ -1,7 +1,7 @@
 FROM oven/bun:1.4.3 AS build
 WORKDIR /app
 COPY package.json bun.lock ./
-RUN bun ci
+RUN bun ci --ignore-scripts
 COPY . .
 RUN bun run build
 
