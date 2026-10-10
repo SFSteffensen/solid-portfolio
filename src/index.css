@@ -158,6 +158,14 @@
     scroll-behavior: smooth;
   }
 
+  /* Set by index.html and the theme toggle */
+  html.light {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
   body {
     background-color: var(--color-base);
     color: var(--color-text);
@@ -257,5 +265,36 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 48px 0 light-dark(rgb(76 79 105 / 0.18), rgb(0 0 0 / 0.45));
+  }
+}
+
+/* Theme switch animation using view transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  animation-name: theme-fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: theme-circle-in;
+}
+
+@keyframes theme-circle-in {
+  from {
+    clip-path: circle(0% at var(--toggle-x, 50%) var(--toggle-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--toggle-x, 50%) var(--toggle-y, 50%));
+  }
+}
+
+@keyframes theme-fade-out {
+  to {
+    opacity: 0;
   }
 }

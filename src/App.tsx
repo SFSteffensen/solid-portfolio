@@ -5,6 +5,7 @@ import { GlassCard } from "./components/GlassCard.tsx";
 import { Icon } from "./components/Icon.tsx";
 import { type Accent, Tag } from "./components/Tag.tsx";
 import { TerminalWindow } from "./components/TerminalWindow.tsx";
+import { ThemeToggle } from "./components/ThemeToggle.tsx";
 
 const accents: Accent[] = [
   "red",
@@ -22,6 +23,9 @@ const accents: Accent[] = [
 export default function App() {
   return (
     <main class="grid min-h-dvh place-items-center bg-scene py-24">
+      <div class="fixed top-6 right-6">
+        <ThemeToggle />
+      </div>
       <div class="container flex flex-col gap-8">
         <div>
           <p class="mb-4 font-mono text-[15px] text-subtext0">$ whoami</p>
