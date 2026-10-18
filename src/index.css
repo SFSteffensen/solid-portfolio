@@ -3,42 +3,42 @@
 /* Fonts are served from the CDN */
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Regular.woff2") format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/fonts/SF-Pro-Display-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Medium.woff2") format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/fonts/SF-Pro-Display-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Semibold.woff2") format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/fonts/SF-Pro-Display-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF Pro Display";
-  src: url("https://cdn.sfsteffensen.dev/SF-Pro-Display-Bold.woff2") format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/fonts/SF-Pro-Display-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF Mono";
-  src: url("https://cdn.sfsteffensen.dev/LigaSFMonoNerdFont-Regular.woff2") format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/fonts/LigaSFMonoNerdFont-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF Mono";
-  src: url("https://cdn.sfsteffensen.dev/LigaSFMonoNerdFont-Medium.woff2") format("woff2");
+  src: url("https://cdn.sfsteffensen.dev/fonts/LigaSFMonoNerdFont-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
