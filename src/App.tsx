@@ -10,7 +10,7 @@ export default function App() {
     <div class="min-h-dvh bg-scene">
       <a
         href="#main"
-        class="sr-only rounded-lg px-4 py-2 glass focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-60"
+        class="sr-only rounded-lg glass px-4 py-2 focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-60"
       >
         Skip to content
       </a>

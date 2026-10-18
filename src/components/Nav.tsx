@@ -30,7 +30,7 @@ export function Nav() {
     <header class="fixed inset-x-4 top-4 z-50">
       <nav
         aria-label="Main"
-        class="mx-auto flex max-w-[1080px] items-center justify-between rounded-[28px] px-6.5 py-3.5 glass-nav"
+        class="mx-auto flex max-w-[1080px] items-center justify-between rounded-[28px] glass-nav px-6.5 py-3.5"
       >
         <a
           href="#home"
