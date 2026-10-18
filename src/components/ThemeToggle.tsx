@@ -2,7 +2,7 @@ import { theme, toggleTheme } from "../theme.ts";
 
 const dark = () => theme() === "dark";
 
-// iOS-style switch: green and knob right in dark mode
+// iOS-style switch
 export function ThemeToggle() {
   return (
     <button

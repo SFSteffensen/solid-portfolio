@@ -234,6 +234,16 @@
   }
 }
 
+/* Visitors who ask for less transparency or more contrast get solid surfaces */
+@custom-variant solid {
+  @media (prefers-reduced-transparency: reduce) {
+    @slot;
+  }
+  @media (prefers-contrast: more) {
+    @slot;
+  }
+}
+
 @utility container {
   margin-inline: auto;
   max-width: 1080px;
@@ -273,6 +283,13 @@
   backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid light-dark(rgb(76 79 105 / 0.1), rgb(198 208 245 / 0.15));
   box-shadow: 0 8px 32px 0 light-dark(rgb(76 79 105 / 0.1), rgb(0 0 0 / 0.3));
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+    background: var(--color-base);
+    backdrop-filter: none;
+  }
+  @media (prefers-contrast: more) {
+    border-color: var(--color-overlay0);
+  }
 }
 
 @utility glass-nav {
@@ -280,18 +297,33 @@
   backdrop-filter: blur(28px) saturate(180%);
   border: 1px solid light-dark(rgb(255 255 255 / 0.55), rgb(198 208 245 / 0.08));
   box-shadow: 0 6px 30px 0 light-dark(rgb(76 79 105 / 0.1), rgb(0 0 0 / 0.22));
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+    background: var(--color-mantle);
+    backdrop-filter: none;
+  }
+  @media (prefers-contrast: more) {
+    border-color: var(--color-overlay0);
+  }
 }
 
 @utility glass-accent {
   background: color-mix(in srgb, var(--color-primary) 15%, transparent);
   backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+    background: color-mix(in srgb, var(--color-primary) 15%, var(--color-base));
+    backdrop-filter: none;
+  }
+  @media (prefers-contrast: more) {
+    border-color: var(--color-overlay0);
+  }
 }
 
 /* Lift on hover, for interactive glass */
 @utility glass-hover {
   transition:
     transform 0.3s var(--ease-smooth),
+    scale 0.3s var(--ease-smooth),
     box-shadow 0.3s var(--ease-smooth);
 
   &:hover {

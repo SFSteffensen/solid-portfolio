@@ -22,7 +22,7 @@ export function SocialLink(props: Social) {
       target={external() ? "_blank" : undefined}
       rel={external() ? "noopener noreferrer" : undefined}
       aria-label={props.label}
-      class="grid size-11.5 place-items-center rounded-lg bg-surface0 text-text transition-all duration-300 ease-smooth hover:-translate-y-0.75 hover:bg-surface1 hover:text-primary hover:shadow-[0_8px_18px_light-dark(rgb(76_79_105/0.2),rgb(0_0_0/0.4))]"
+      class="grid size-11.5 place-items-center rounded-lg bg-surface0 text-text transition-all duration-300 ease-smooth hover:-translate-y-0.75 hover:bg-surface1 hover:text-primary hover:shadow-[0_8px_18px_light-dark(rgb(76_79_105/0.2),rgb(0_0_0/0.4))] active:scale-[0.94] active:duration-100"
     >
       <Icon name={props.icon} />
     </a>

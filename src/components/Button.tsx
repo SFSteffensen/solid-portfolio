@@ -9,7 +9,7 @@ const variants: Record<Variant, string> = {
   primary:
     "bg-primary text-(color:--color-base) hover:-translate-y-px hover:opacity-90 hover:shadow-[0_4px_14px_color-mix(in_srgb,var(--color-primary)_28%,transparent)]",
   secondary:
-    "border border-text/12 bg-base/70 backdrop-blur-xl backdrop-saturate-180 hover:-translate-y-px hover:border-surface2 hover:bg-surface1",
+    "border border-text/12 bg-base/70 backdrop-blur-xl backdrop-saturate-180 hover:-translate-y-px hover:border-surface2 hover:bg-surface1 solid:bg-base solid:backdrop-blur-none",
   ghost: "hover:bg-surface0",
 };
 
@@ -23,7 +23,7 @@ type ButtonProps = ParentProps<{
 
 export function Button(props: ButtonProps) {
   const classes = () => [
-    "inline-flex cursor-pointer items-center gap-2 rounded-xl px-5.5 py-3 text-[15px] font-medium transition-all duration-300 ease-smooth",
+    "inline-flex cursor-pointer items-center gap-2 rounded-xl px-5.5 py-3 text-[15px] font-medium transition-all duration-300 ease-smooth active:scale-[0.97] active:duration-100",
     variants[props.variant ?? "primary"],
   ];
   const content = (
