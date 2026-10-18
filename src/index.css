@@ -44,7 +44,8 @@
   font-display: swap;
 }
 
-@theme {
+/* static: accents are also referenced by name at runtime (var(--color-<name>)), so always emit them */
+@theme static {
   --font-sans:
     "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
@@ -186,21 +187,26 @@
       color 0.3s ease;
   }
 
-  /* Language brand colors for tags, shaded per theme where the brand color lacks contrast */
+  /* Tech brand colors for tags, shaded per theme where the brand color lacks contrast */
   :root {
-    --lang-rust: #f74c01;
-    --lang-c: light-dark(#03599c, #659ad2);
-    --lang-fsharp: light-dark(#378bba, #30b9db);
-    --lang-python: light-dark(#4b8abc, #6ba5db);
-    --lang-python-gradient: linear-gradient(
+    --tech-rust: #f74c01;
+    --tech-c: light-dark(#03599c, #659ad2);
+    --tech-fsharp: light-dark(#378bba, #30b9db);
+    --tech-python: light-dark(#4b8abc, #6ba5db);
+    --tech-python-gradient: linear-gradient(
       170deg,
-      var(--lang-python) 60%,
+      var(--tech-python) 60%,
       light-dark(#c99a00, #fed844) 40%
     );
-    --lang-typescript: light-dark(#3078c6, #5d9ce6);
-    --lang-typst: light-dark(#239bab, #4fc3d1);
-    --lang-macos: var(--color-text);
-    --lang-linux: light-dark(#a07800, #fcc624);
+    --tech-typescript: light-dark(#3078c6, #5d9ce6);
+    --tech-typst: light-dark(#239bab, #4fc3d1);
+    --tech-macos: var(--color-text);
+    --tech-linux: light-dark(#a07800, #fcc624);
+    --tech-solid: light-dark(#2c4f7c, #76a6dd);
+    --tech-tauri: light-dark(#178a99, #24c8db);
+    --tech-svelte: #ff3e00;
+    --tech-supabase: light-dark(#1f9d63, #3ecf8e);
+    --tech-vercel: var(--color-text);
   }
 
   ::selection {

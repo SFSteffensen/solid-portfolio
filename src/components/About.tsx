@@ -2,7 +2,7 @@ import { For } from "solid-js";
 
 import { GlassCard } from "./GlassCard.tsx";
 import { SectionHeading } from "./SectionHeading.tsx";
-import { type Language, LanguageTag } from "./Tag.tsx";
+import { type Tech, TechTag } from "./Tag.tsx";
 import { TerminalWindow } from "./TerminalWindow.tsx";
 
 const portrait = "https://cdn.sfsteffensen.dev/Meirl.webp";
@@ -13,7 +13,7 @@ const facts: { key: string; value: string; color: string }[] = [
   { key: "work", value: "Student SWE @LEGO", color: "text-yellow" },
 ];
 
-const stack: Language[] = ["Rust", "C", "F#", "Python", "TypeScript", "Typst", "macOS", "Linux"];
+const stack: Tech[] = ["Rust", "C", "F#", "Python", "TypeScript", "Typst", "macOS", "Linux"];
 
 // Portrait in a terminal window
 function Portrait() {
@@ -80,7 +80,7 @@ export function About() {
               <For each={stack}>
                 {(name) => (
                   <li>
-                    <LanguageTag name={name} size="md" />
+                    <TechTag name={name} size="md" />
                   </li>
                 )}
               </For>

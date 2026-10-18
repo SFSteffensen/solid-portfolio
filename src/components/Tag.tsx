@@ -20,18 +20,24 @@ export type Accent =
 export const accent = (name: Accent) => `var(--color-${name})`;
 
 // Brand colors, defined in index.css
-export const languages = {
-  Rust: { color: "var(--lang-rust)" },
-  C: { color: "var(--lang-c)" },
-  "F#": { color: "var(--lang-fsharp)" },
-  Python: { color: "var(--lang-python)", gradient: "var(--lang-python-gradient)" },
-  TypeScript: { color: "var(--lang-typescript)" },
-  Typst: { color: "var(--lang-typst)" },
-  macOS: { color: "var(--lang-macos)" },
-  Linux: { color: "var(--lang-linux)" },
+export const tech = {
+  Rust: { color: "var(--tech-rust)" },
+  C: { color: "var(--tech-c)" },
+  "F#": { color: "var(--tech-fsharp)" },
+  Python: { color: "var(--tech-python)", gradient: "var(--tech-python-gradient)" },
+  TypeScript: { color: "var(--tech-typescript)" },
+  Typst: { color: "var(--tech-typst)" },
+  macOS: { color: "var(--tech-macos)" },
+  Linux: { color: "var(--tech-linux)" },
+  SolidJS: { color: "var(--tech-solid)" },
+  Tauri: { color: "var(--tech-tauri)" },
+  Svelte: { color: "var(--tech-svelte)" },
+  Supabase: { color: "var(--tech-supabase)" },
+  Vercel: { color: "var(--tech-vercel)" },
+  "Machine Learning": { color: accent("mauve") },
 } satisfies Record<string, { color: string; gradient?: string }>;
 
-export type Language = keyof typeof languages;
+export type Tech = keyof typeof tech;
 
 type TagProps = ParentProps<{
   color: string;
@@ -62,9 +68,9 @@ export function Tag(props: TagProps) {
   );
 }
 
-export function LanguageTag(props: { name: Language; size?: "sm" | "md" }) {
+export function TechTag(props: { name: Tech; size?: "sm" | "md" }) {
   return (
-    <Tag {...languages[props.name]} size={props.size}>
+    <Tag {...tech[props.name]} size={props.size}>
       {props.name}
     </Tag>
   );

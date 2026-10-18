@@ -3,6 +3,7 @@ import { For } from "solid-js";
 import { About } from "./components/About.tsx";
 import { Hero } from "./components/Hero.tsx";
 import { Nav } from "./components/Nav.tsx";
+import { Projects } from "./components/Projects.tsx";
 
 export default function App() {
   return (
@@ -18,9 +19,10 @@ export default function App() {
       <main id="main" tabindex="-1">
         <Hero />
         <About />
+        <Projects />
 
         {/* Placeholders until each section is built */}
-        <For each={["Projects", "Experience", "Contact"]}>
+        <For each={["Experience", "Contact"]}>
           {(label) => (
             <section id={label.toLowerCase()} class="container min-h-[70vh] scroll-mt-24 py-24">
               <h2 class="text-[40px] font-bold tracking-heading">{label}</h2>
