@@ -3,7 +3,7 @@ pre-commit:
   jobs:
     - name: format
       glob: "*.{js,jsx,ts,tsx,json,jsonc,css,html,md,yml,yaml}"
-      run: bunx oxfmt --check {staged_files}
+      run: bun fmt --check {staged_files}
 
     - name: lint
       glob: "*.{js,jsx,ts,tsx}"
@@ -11,4 +11,4 @@ pre-commit:
 
     - name: typecheck
       glob: "*.{ts,tsx}"
-      run: bunx tsc
+      run: bun check --no-script

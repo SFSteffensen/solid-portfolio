@@ -1,0 +1,8 @@
+[fmt]
+# oxfmt's default, which this codebase was formatted with (Prettier's is 80)
+printWidth = 100
+sortImports = true
+ignorePatterns = ["bun.lock"]
+
+[fmt.sortTailwindcss]
+stylesheet = "./src/index.css"
