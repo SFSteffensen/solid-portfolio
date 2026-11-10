@@ -2,7 +2,8 @@ import { Icon, type IconName } from "./Icon.tsx";
 
 type Social = { label: string; href: string; icon: IconName };
 
-export const email = "Sebastian@sfsteffensen.dev";
+// weak obfuscation to avoid spam bots, but still allow copy-paste
+export const email = "ved.nesneffetsfs@naitsabeS".split("").toReversed().join("");
 
 export const socials = {
   github: { label: "GitHub", href: "https://github.com/SFSteffensen", icon: "github" },
