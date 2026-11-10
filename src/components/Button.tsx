@@ -23,7 +23,7 @@ type ButtonProps = ParentProps<{
 
 export function Button(props: ButtonProps) {
   const classes = () => [
-    "inline-flex cursor-pointer items-center gap-2 rounded-xl px-5.5 py-3 text-[15px] font-medium transition-all duration-300 ease-smooth active:scale-[0.97] active:duration-100",
+    "inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-5.5 py-3 text-[15px] font-medium transition-all duration-300 ease-smooth active:scale-[0.97] active:duration-100",
     variants[props.variant ?? "primary"],
   ];
   const content = (

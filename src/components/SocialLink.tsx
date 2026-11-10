@@ -2,6 +2,8 @@ import { Icon, type IconName } from "./Icon.tsx";
 
 type Social = { label: string; href: string; icon: IconName };
 
+export const email = "Sebastian@sfsteffensen.dev";
+
 export const socials = {
   github: { label: "GitHub", href: "https://github.com/SFSteffensen", icon: "github" },
   linkedin: {
@@ -9,7 +11,7 @@ export const socials = {
     href: "https://www.linkedin.com/in/sfsteffensen",
     icon: "linkedin",
   },
-  email: { label: "Email", href: "mailto:Sebastian@sfsteffensen.dev", icon: "mail" },
+  email: { label: "Email", href: `mailto:${email}`, icon: "mail" },
 } satisfies Record<string, Social>;
 
 // Square icon button that lifts and turns red on hover
