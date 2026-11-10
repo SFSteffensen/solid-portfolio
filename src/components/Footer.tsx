@@ -9,7 +9,7 @@ export function Footer() {
         <SocialLink {...socials.email} />
       </div>
       <p class="font-mono text-[12.5px] text-subtext0">
-        Built with SolidJS, riced with Catppuccin {new Date().getFullYear()} SFSteffensen
+        Built with SolidJS, riced with Catppuccin - {new Date().getFullYear()} SFSteffensen
       </p>
     </footer>
   );

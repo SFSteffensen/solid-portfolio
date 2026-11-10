@@ -29,7 +29,7 @@ export function Contact() {
   return (
     <section id="contact" class="container scroll-mt-24 pt-16 pb-24">
       <SectionHeading eyebrow="// say hi" title="Get in touch">
-        Open side projects, or just a chat about Rust and glass.
+        Open to side projects, or just a chat about Rust and glass.
       </SectionHeading>
 
       <GlassCard class="flex flex-col gap-6 p-8.5 md:flex-row md:items-center md:justify-between">

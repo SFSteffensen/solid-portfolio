@@ -59,9 +59,9 @@ export function About() {
         <div class="flex flex-col gap-4">
           <GlassCard class="space-y-3.5 p-7.5 leading-[1.7]">
             <p>
-              I'm <strong class="font-semibold text-primary">Sebastian</strong> a developer and
+              I'm <strong class="font-semibold text-primary">Sebastian</strong>, a developer and
               engineering student based near Copenhagen. I like understanding things from the ground
-              up, which is how I ended up Rust for fun.
+              up, which is how I ended up writing Rust for fun.
             </p>
             <p>
               On the front-end I'm all-in on trying out emerging frameworks and tooling, and I love
@@ -69,7 +69,7 @@ export function About() {
               my setup with Catppuccin and tinker with anything from CLI tools to home automation.
             </p>
             <p>
-              These days I'm happily empiloyed at LEGO's Digital office. Outside work it's mainly
+              These days I'm happily employed at LEGO's Digital office. Outside work it's mainly
               fighting new programming concepts at university, and building my own projects in Rust.
             </p>
           </GlassCard>
