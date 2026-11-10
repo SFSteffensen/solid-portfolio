@@ -1,6 +1,5 @@
-import { For } from "solid-js";
-
 import { About } from "./components/About.tsx";
+import { Experience } from "./components/Experience.tsx";
 import { Hero } from "./components/Hero.tsx";
 import { Nav } from "./components/Nav.tsx";
 import { Projects } from "./components/Projects.tsx";
@@ -20,15 +19,12 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
+        <Experience />
 
-        {/* Placeholders until each section is built */}
-        <For each={["Experience", "Contact"]}>
-          {(label) => (
-            <section id={label.toLowerCase()} class="container min-h-[70vh] scroll-mt-24 py-24">
-              <h2 class="text-[40px] font-bold tracking-heading">{label}</h2>
-            </section>
-          )}
-        </For>
+        {/* Placeholder until the section is built */}
+        <section id="contact" class="container min-h-[70vh] scroll-mt-24 py-24">
+          <h2 class="text-[40px] font-bold tracking-heading">Contact</h2>
+        </section>
       </main>
     </div>
   );
