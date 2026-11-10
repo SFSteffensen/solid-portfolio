@@ -1,8 +1,8 @@
 import { About } from "./components/About.tsx";
 import { Contact } from "./components/Contact.tsx";
-import { Experience } from "./components/Experience.tsx";
 import { Footer } from "./components/Footer.tsx";
 import { Hero } from "./components/Hero.tsx";
+import { History } from "./components/History.tsx";
 import { Nav } from "./components/Nav.tsx";
 import { Projects } from "./components/Projects.tsx";
 
@@ -21,7 +21,7 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
-        <Experience />
+        <History />
         <Contact />
       </main>
       <Footer />

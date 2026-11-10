@@ -2,7 +2,7 @@ import { createSignal, For, onSettled } from "solid-js";
 
 import { ThemeToggle } from "./ThemeToggle.tsx";
 
-export const sections = ["Home", "About", "Projects", "Experience", "Contact"] as const;
+export const sections = ["Home", "About", "Projects", "History", "Contact"] as const;
 
 const sectionId = (label: string) => label.toLowerCase();
 
