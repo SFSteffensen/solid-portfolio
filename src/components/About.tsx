@@ -25,7 +25,7 @@ function Portrait() {
         width="260"
         height="240"
         loading="lazy"
-        class="h-60 w-full object-cover object-top"
+        class="h-60 w-full object-cover object-top [image-rendering:pixelated]"
       />
       <div class="border-t border-overlay0/20 px-3.25 pt-2.5 pb-2 font-mono text-[11px] leading-[1.65]">
         <dl>
