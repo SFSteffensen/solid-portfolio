@@ -1,0 +1,9 @@
+# Read by Cloudflare Workers and applied to responses; never served itself
+
+# Vite fingerprints everything in /assets, so a file there never changes
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Keep the workers.dev preview copies out of search results
+https://:worker.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex
