@@ -20,3 +20,5 @@ Thumbs.db
 
 # Design mockup
 /mockup/
+# Wrangler local state
+.wrangler/
