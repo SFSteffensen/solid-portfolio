@@ -9,4 +9,6 @@
     // Unknown paths get index.html, so deep links keep working
     "not_found_handling": "single-page-application",
   },
+  // Lets Workers Builds give each non-master branch a preview URL via `wrangler preview`
+  "previews": {},
 }
