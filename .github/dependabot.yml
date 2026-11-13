@@ -3,12 +3,29 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: monthly
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: Europe/Copenhagen
 
   - package-ecosystem: bun
     directory: /
     schedule:
-      interval: monthly
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: Europe/Copenhagen
     groups:
       dev-dependencies:
         dependency-type: development
+      dependencies:
+        dependency-type: production
+
+  # The Dockerfile pins the Bun image, which otherwise drifts behind package.json
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: Europe/Copenhagen
