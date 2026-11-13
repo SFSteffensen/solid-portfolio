@@ -1,20 +1,30 @@
-import { createSignal } from "solid-js";
+import { About } from "./components/About.tsx";
+import { Contact } from "./components/Contact.tsx";
+import { Footer } from "./components/Footer.tsx";
+import { Hero } from "./components/Hero.tsx";
+import { History } from "./components/History.tsx";
+import { Nav } from "./components/Nav.tsx";
+import { Projects } from "./components/Projects.tsx";
 
 export default function App() {
-  const [count, setCount] = createSignal(0);
-
   return (
-    <main class="grid min-h-dvh place-items-center bg-zinc-950 text-zinc-100">
-      <div class="flex flex-col items-center gap-4">
-        <h1 class="text-4xl font-bold">Portfolio</h1>
-        <button
-          type="button"
-          class="rounded-md bg-zinc-800 px-4 py-2 hover:bg-zinc-700"
-          onClick={() => setCount((c) => c + 1)}
-        >
-          Clicked {count()} times
-        </button>
-      </div>
-    </main>
+    <div class="min-h-dvh bg-scene">
+      <a
+        href="#main"
+        class="sr-only rounded-lg glass px-4 py-2 focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-60"
+      >
+        Skip to content
+      </a>
+      <Nav />
+
+      <main id="main" tabindex="-1">
+        <Hero />
+        <About />
+        <Projects />
+        <History />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
