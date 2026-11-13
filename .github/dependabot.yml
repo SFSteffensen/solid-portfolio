@@ -20,12 +20,3 @@ updates:
         dependency-type: development
       dependencies:
         dependency-type: production
-
-  # The Dockerfile pins the Bun image, which otherwise drifts behind package.json
-  - package-ecosystem: docker
-    directory: /
-    schedule:
-      interval: weekly
-      day: monday
-      time: "08:00"
-      timezone: Europe/Copenhagen

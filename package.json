@@ -21,7 +21,6 @@
   "devDependencies": {
     "@solidjs/vite-plugin": "^3.0.0-next.57",
     "@tailwindcss/vite": "^4.3.5",
-    "@types/bun": "^1.4.4",
     "eslint-plugin-solid": "^0.19.0",
     "lefthook": "^2.2.2",
     "oxlint": "^1.93.0",
