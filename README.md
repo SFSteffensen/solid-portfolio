@@ -9,6 +9,7 @@ My personal portfolio website, showcasing my work, skills, and experience.
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [TypeScript 7](https://www.typescriptlang.org/)
 - [Bun](https://bun.sh/) as package manager and runtime
+- [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/) static assets for hosting
 
 ## Getting Started
 
@@ -35,11 +36,15 @@ bun install
 | `bun run preview`   | Preview the production build                    |
 | `bun run typecheck` | Type-check only                                 |
 
-## Docker
+## Deployment
 
-The image builds the site and serves `dist/` with a small Bun static server (`serve.ts`) on port 3000:
+The site is static: Cloudflare serves the Vite build in `dist/` straight from its edge, configured in `wrangler.jsonc`. [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/) builds and deploys every push to `master`, and other branches get a preview URL.
+
+`public/_headers` sets the caching rules: fingerprinted files in `/assets` are cached for a year, while `index.html` is revalidated on every visit so new deploys show up immediately.
+
+To run the production setup locally:
 
 ```sh
-docker build -t portfolio .
-docker run -p 3000:3000 portfolio
+bun run build
+bunx wrangler dev
 ```
