@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Must match the Worker's name in the Cloudflare dashboard for Workers Builds
+  "name": "portfolio",
+  "compatibility_date": "2026-11-13",
+  // No Worker script: Cloudflare serves the Vite build straight from its edge
+  "assets": {
+    "directory": "./dist",
+    // Unknown paths get index.html, like serve.ts did, so deep links keep working
+    "not_found_handling": "single-page-application",
+  },
+}
