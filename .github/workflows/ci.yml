@@ -10,29 +10,48 @@ permissions:
 
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  # A new push to a PR replaces its old run, but every commit on master gets checked
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  check:
-    name: check
+  checks:
+    name: Typecheck, lint & build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version-file: package.json
-      - run: bun ci
-      - run: bun run typecheck
-      - run: bun run lint
-      - run: bun run format:check
-      - run: bun run build
 
-  # the single check that branch protection requires, so jobs can be
-  # added or renamed without touching the protection settings
-  ci-passed:
-    name: CI passed
+      - name: Install
+        id: install
+        run: bun ci
+
+      # Each check runs even if an earlier one failed, so one push surfaces every problem
+      - name: Typecheck
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: bun run typecheck
+
+      - name: Lint
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: bun run lint
+
+      - name: Format
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: bun run format:check
+
+      # Vite only: the build script type-checks first, which would repeat the step above
+      - name: Build
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: bun --bun vite build
+
+  # The one check branch protection requires, so jobs above can change freely
+  ready:
+    name: Ready to merge
     if: always()
-    needs: [check]
+    needs: [checks]
     runs-on: ubuntu-latest
+    timeout-minutes: 2
     steps:
-      - run: test "${{ needs.check.result }}" = success
+      - run: test "${{ needs.checks.result }}" = success
