@@ -15,8 +15,8 @@
     "check": "bun check --no-script && oxlint && bun fmt --check"
   },
   "dependencies": {
-    "@solidjs/web": "^2.0.0-rc.21",
-    "solid-js": "^2.0.0-rc.21"
+    "@solidjs/web": "^2.0.3",
+    "solid-js": "^2.0.3"
   },
   "devDependencies": {
     "@solidjs/vite-plugin": "^3.0.1",
